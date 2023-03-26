@@ -1,0 +1,91 @@
+E:\Egor\Education\Labs\LMV\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\PolyclinicManagementSystem.exe.config
+E:\Egor\Education\Labs\LMV\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\PolyclinicManagementSystem.exe
+E:\Egor\Education\Labs\LMV\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\PolyclinicManagementSystem.pdb
+E:\Egor\Education\Labs\LMV\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.csproj.AssemblyReference.cache
+E:\Egor\Education\Labs\LMV\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.csproj.SuggestedBindingRedirects.cache
+E:\Egor\Education\Labs\LMV\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.Properties.Resources.resources
+E:\Egor\Education\Labs\LMV\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.csproj.GenerateResource.cache
+E:\Egor\Education\Labs\LMV\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.csproj.CoreCompileInputs.cache
+E:\Egor\Education\Labs\LMV\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.exe
+E:\Egor\Education\Labs\LMV\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.pdb
+E:\Egor\Education\Labs\LMV\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.LoginDoctorForm.resources
+E:\Egor\Education\Labs\LMV\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.MainForm.resources
+E:\Egor\Education\Labs\LMV\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\BouncyCastle.Crypto.dll
+E:\Egor\Education\Labs\LMV\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\Google.Protobuf.dll
+E:\Egor\Education\Labs\LMV\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\K4os.Compression.LZ4.dll
+E:\Egor\Education\Labs\LMV\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\K4os.Compression.LZ4.Streams.dll
+E:\Egor\Education\Labs\LMV\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\K4os.Hash.xxHash.dll
+E:\Egor\Education\Labs\LMV\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\MySql.Data.dll
+E:\Egor\Education\Labs\LMV\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\System.Buffers.dll
+E:\Egor\Education\Labs\LMV\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\System.Memory.dll
+E:\Egor\Education\Labs\LMV\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\System.Numerics.Vectors.dll
+E:\Egor\Education\Labs\LMV\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+E:\Egor\Education\Labs\LMV\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\ZstdNet.dll
+E:\Egor\Education\Labs\LMV\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\BouncyCastle.Crypto.xml
+E:\Egor\Education\Labs\LMV\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\Google.Protobuf.pdb
+E:\Egor\Education\Labs\LMV\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\Google.Protobuf.xml
+E:\Egor\Education\Labs\LMV\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\K4os.Compression.LZ4.xml
+E:\Egor\Education\Labs\LMV\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\K4os.Compression.LZ4.Streams.xml
+E:\Egor\Education\Labs\LMV\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\K4os.Hash.xxHash.xml
+E:\Egor\Education\Labs\LMV\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\MySql.Data.xml
+E:\Egor\Education\Labs\LMV\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\System.Buffers.xml
+E:\Egor\Education\Labs\LMV\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\System.Memory.xml
+E:\Egor\Education\Labs\LMV\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\System.Numerics.Vectors.xml
+E:\Egor\Education\Labs\LMV\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+E:\Egor\Education\Labs\LMV\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.csproj.CopyComplete
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\PolyclinicManagementSystem.exe.config
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\PolyclinicManagementSystem.exe
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\PolyclinicManagementSystem.pdb
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\Google.Protobuf.dll
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\MySql.Data.dll
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\System.Buffers.dll
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\System.Memory.dll
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\ZstdNet.dll
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\Google.Protobuf.pdb
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\Google.Protobuf.xml
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\MySql.Data.xml
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\System.Buffers.xml
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\System.Memory.xml
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.csproj.AssemblyReference.cache
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.csproj.SuggestedBindingRedirects.cache
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.DoctorForm.resources
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.LoginDoctorForm.resources
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.MainForm.resources
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.Properties.Resources.resources
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.csproj.GenerateResource.cache
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.csproj.CopyComplete
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.exe
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.pdb
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.Forms.AddAppointmentForm.resources
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.Forms.ChangeAppointmentForm.resources
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.RegisterPatientForm.resources
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.AdministratorForm.resources
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.Forms.ChangeDoctorForm.resources
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.Forms.ChangePatientForm.resources
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.Forms.LoginAdminForm.resources
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.RegisterDoctorForm.resources
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.Forms.AddSpecializationForm.resources
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\ScottPlot.dll
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\ScottPlot.WinForms.dll
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\System.Drawing.Common.dll
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\System.IO.Pipelines.dll
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\System.ValueTuple.dll
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\ScottPlot.xml
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\System.IO.Pipelines.xml
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\System.ValueTuple.xml
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.Forms.GraphicForm.resources
