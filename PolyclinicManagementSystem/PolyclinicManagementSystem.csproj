@@ -251,6 +251,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Polyclinic Management System.docx" />
     <None Include="Properties\DataSources\PolyclinicManagementSystem.Models.AppointmentModel.datasource" />
     <None Include="Properties\DataSources\PolyclinicManagementSystem.Models.DoctorModel.datasource" />
     <None Include="Properties\DataSources\PolyclinicManagementSystem.Models.PatientModel.datasource" />

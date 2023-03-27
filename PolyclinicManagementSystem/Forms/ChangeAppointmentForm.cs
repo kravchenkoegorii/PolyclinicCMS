@@ -47,6 +47,66 @@ namespace PolyclinicManagementSystem.Forms
                 Error_Label.ForeColor = Color.Black;
             }
 
+            var date = DateTime.Parse(Date_TextBox.Text);
+            var appointments = _appointmentsDao.GetDoctorAppointments(_docId);
+
+            foreach (var item in appointments)
+            {
+                if (item.Date.Day == date.Day && item.Date.Month == date.Month && date.Hour != item.Date.Hour)
+                {
+                    if (date.Minute == 0 && date.Second == 0)
+                    {
+                        if (date.Hour >= 7 && date.Hour <= 20)
+                        {
+                            Date_TextBox.ForeColor = Color.Black;
+                            Error_Label.Text = "";
+                        }
+                        else
+                        {
+                            Date_TextBox.ForeColor = Color.Red;
+                            Error_Label.Text = "Error: time is incorrect!";
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        Date_TextBox.ForeColor = Color.Red;
+                        Error_Label.Text = "Error: time is incorrect!";
+                        return;
+                    }
+                }
+                else
+                {
+                    Date_TextBox.ForeColor = Color.Red;
+                    Error_Label.Text = "Error: time is incorrect!";
+                    return;
+                }
+            }
+
+            if (appointments.Count == 0)
+            {
+                if (date.Minute == 0 && date.Second == 0)
+                {
+                    if (date.Hour >= 7 && date.Hour <= 20)
+                    {
+                        Date_TextBox.ForeColor = Color.Black;
+                        Error_Label.Text = "";
+                    }
+                    else
+                    {
+                        Date_TextBox.ForeColor = Color.Red;
+                        Error_Label.Text = "Error: time is incorrect!";
+                        return;
+                    }
+                }
+                else
+                {
+                    Date_TextBox.ForeColor = Color.Red;
+                    Error_Label.Text = "Error: time is incorrect!";
+                    return;
+                }
+            }
+
             AppointmentModel model = new AppointmentModel
             {
                 Id = (int)numericUpDown2.Value,
