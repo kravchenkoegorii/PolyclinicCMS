@@ -5,7 +5,9 @@ namespace PolyclinicManagementSystem.DAOs
 {
     public interface IDoctorsDao
     {
-        int GetSessionId();
+        string GetName();
+
+        string GetSurname();
 
         void AddDoctor(DoctorModel doctor);
 
@@ -13,10 +15,12 @@ namespace PolyclinicManagementSystem.DAOs
 
         List<DoctorModel> GetAllDoctors();
         
-        List<PatientModel> GetAllDoctorPatients(string id);
+        List<PatientModel> GetAllDoctorPatients(string name, string surname);
 
         bool LoginDoctor(string email, string password);
 
-        DoctorModel GetDoctor(int id);
+        DoctorModel GetDoctor(string name, string surname);
+
+        bool CheckDoctor(string name, string surname);
     }
 }

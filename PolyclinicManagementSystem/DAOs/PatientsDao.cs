@@ -100,13 +100,16 @@ namespace PolyclinicManagementSystem.DAOs
             return results; 
         }
 
-        public bool CheckPatient(int patId)
+        public bool CheckPatient(string name, string surname)
         {
             MySqlConnection connection = new MySqlConnection(_connectionString);
             connection.Open();
-            string sql = $"SELECT p.name FROM Patients p WHERE p.id = @val1";
+            string sql = $"SELECT p.name, p.surname FROM Patients p " +
+                $"WHERE p.name = @val1 " +
+                $"AND p.surname = @val2;";
             MySqlCommand command = new MySqlCommand(sql, connection);
-            command.Parameters.AddWithValue("@val1", patId);
+            command.Parameters.AddWithValue("@val1", name);
+            command.Parameters.AddWithValue("@val2", surname);
             command.Prepare();
 
             using (MySqlDataReader reader = command.ExecuteReader())
@@ -115,8 +118,9 @@ namespace PolyclinicManagementSystem.DAOs
                 {
                     while (reader.Read())
                     {
-                        string name = reader.GetString(0);
-                        if(name == null || name == "")
+                        name = reader.GetString(0);
+                        surname = reader.GetString(1);
+                        if(string.IsNullOrEmpty(name) && string.IsNullOrEmpty(surname))
                         {
                             return false;
                         }
@@ -127,13 +131,15 @@ namespace PolyclinicManagementSystem.DAOs
             }
         }
 
-        PatientModel IPatientsDao.GetPatient(int id)
+        PatientModel IPatientsDao.GetPatient(string name, string surname)
         {
             PatientModel pat = null;
 
             MySqlConnection connection = new MySqlConnection(_connectionString);
             connection.Open();
-            MySqlCommand command = new MySqlCommand($"SELECT * FROM patients WHERE id = {id}", connection);
+            MySqlCommand command = new MySqlCommand($"SELECT * FROM patients " +
+                $"WHERE `name` = '{name}' " +
+                $"AND `surname` = '{surname}'", connection);
 
             using (MySqlDataReader reader = command.ExecuteReader())
             {

@@ -34,7 +34,7 @@ namespace PolyclinicManagementSystem.Forms
             var docPatients = new List<int>();
             foreach(var item in allDocs)
             {
-                docPatients.Add(_doctorsDao.GetAllDoctorPatients(item.Id.ToString()).Count());
+                //docPatients.Add(_doctorsDao.GetAllDoctorPatients(item.Id.ToString()).Count());
             }
 
             double[] doctors = new double[allDocs.Count];

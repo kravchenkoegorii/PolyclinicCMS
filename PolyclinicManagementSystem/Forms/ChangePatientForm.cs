@@ -35,19 +35,6 @@ namespace PolyclinicManagementSystem.Forms
             _patientsDao.ChangePatient(model);
         }
 
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-            PatientModel model = _patientsDao.GetPatient((int)numericUpDown1.Value);
-            if(model == null)
-            {
-                Address_TextBox.Text = "";
-                Phone_TextBox.Text = "";
-                return;
-            }
-            Address_TextBox.Text = model.Address;
-            Phone_TextBox.Text = model.PhoneNumber;
-        }
-
         private void Phone_TextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&

@@ -10,13 +10,20 @@ namespace PolyclinicManagementSystem.DAOs
 {
     public class DoctorsDao : IDoctorsDao
     {
-        private int SessionId;
-        
+        private string _name;
+
+        private string _surname;
+
         private readonly string _connectionString = Consts.ConnectionString;
 
-        public int GetSessionId()
+        public string GetName()
         {
-            return SessionId;
+            return _name;
+        }
+
+        public string GetSurname()
+        {
+            return _surname;
         }
 
         public List<DoctorModel> GetAllDoctors()
@@ -51,12 +58,14 @@ namespace PolyclinicManagementSystem.DAOs
 
             connection.Close();
 
-            return results; 
+            return results;
         }
 
-        public List<PatientModel> GetAllDoctorPatients(string id)
+        public List<PatientModel> GetAllDoctorPatients(string name, string surname)
         {
             List<PatientModel> results = new List<PatientModel>();
+
+            int id = GetDoctor(name, surname).Id;
 
             MySqlConnection connection = new MySqlConnection(_connectionString);
             connection.Open();
@@ -84,31 +93,32 @@ namespace PolyclinicManagementSystem.DAOs
 
             connection.Close();
 
-            return results; 
+            return results;
         }
 
         public bool LoginDoctor(string email, string password)
         {
             LoginDto doc = null;
-            
+
             MySqlConnection connection = new MySqlConnection(_connectionString);
             connection.Open();
-            string sql = $"SELECT d.id, d.email, d.password FROM Doctors d WHERE d.email = @val1";
+            string sql = $"SELECT d.name, d.surname, d.email, d.password FROM Doctors d WHERE d.email = @val1";
             MySqlCommand command = new MySqlCommand(sql, connection);
             command.Parameters.AddWithValue("@val1", email);
             command.Prepare();
 
             using (MySqlDataReader reader = command.ExecuteReader())
             {
-                if(reader.HasRows)
+                if (reader.HasRows)
                 {
-                    while(reader.Read())
+                    while (reader.Read())
                     {
-                        SessionId = reader.GetInt32(0);
+                        _name = reader.GetString(0);
+                        _surname = reader.GetString(1);
                         doc = new LoginDto
                         {
-                            Email = reader.GetString(1),
-                            Password = reader.GetString(2)
+                            Email = reader.GetString(2),
+                            Password = reader.GetString(3)
                         };
                         break;
                     }
@@ -119,7 +129,7 @@ namespace PolyclinicManagementSystem.DAOs
                     return false;
                 }
             }
-            
+
             connection.Close();
 
             return !string.IsNullOrEmpty(doc.Email) && doc.Password == password;
@@ -160,13 +170,15 @@ namespace PolyclinicManagementSystem.DAOs
             connection.Close();
         }
 
-        public DoctorModel GetDoctor(int id)
+        public DoctorModel GetDoctor(string name, string surname)
         {
             DoctorModel doc = new DoctorModel();
 
             MySqlConnection connection = new MySqlConnection(_connectionString);
             connection.Open();
-            MySqlCommand command = new MySqlCommand($"SELECT * FROM doctors WHERE id = {id}", connection);
+            MySqlCommand command = new MySqlCommand($"SELECT * FROM Doctors " +
+                $"WHERE name = '{name}' " +
+                $"AND surname = '{surname}';", connection);
 
             using (MySqlDataReader reader = command.ExecuteReader())
             {
@@ -193,6 +205,37 @@ namespace PolyclinicManagementSystem.DAOs
             connection.Close();
 
             return doc;
+        }
+
+        bool IDoctorsDao.CheckDoctor(string name, string surname)
+        {
+            MySqlConnection connection = new MySqlConnection(_connectionString);
+            connection.Open();
+            string sql = $"SELECT d.name, d.surname FROM Doctors d " +
+                $"WHERE d.name = @val1 " +
+                $"AND d.surname = @val2;";
+            MySqlCommand command = new MySqlCommand(sql, connection);
+            command.Parameters.AddWithValue("@val1", name);
+            command.Parameters.AddWithValue("@val2", surname);
+            command.Prepare();
+
+            using (MySqlDataReader reader = command.ExecuteReader())
+            {
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        name = reader.GetString(0);
+                        surname = reader.GetString(1);
+                        if (string.IsNullOrEmpty(name) && string.IsNullOrEmpty(surname))
+                        {
+                            return false;
+                        }
+                        return true;
+                    }
+                }
+                return false;
+            }
         }
     }
 }

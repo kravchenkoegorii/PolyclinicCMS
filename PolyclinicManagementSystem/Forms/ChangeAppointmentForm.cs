@@ -15,40 +15,61 @@ namespace PolyclinicManagementSystem.Forms
 {
     public partial class ChangeAppointmentForm : Form
     {
-        private int _docId;
+        private bool _checkDate;
+
+        private bool _checkPat;
+
+        private string _name;
+
+        private string _surname;
+
         private IAppointmentsDao _appointmentsDao;
+
         private IPatientsDao _patientsDao;
 
-        public ChangeAppointmentForm(int docId)
+        private IDoctorsDao _doctorsDao;
+
+        public ChangeAppointmentForm(string name, string surname)
         {
             InitializeComponent();
             _appointmentsDao = new AppointmentsDao();
             _patientsDao = new PatientsDao();
-            _docId = docId;
+            _doctorsDao = new DoctorsDao();
+            _name = name;
+            _surname = surname;
         }
 
-        private void Change_Button_Click(object sender, EventArgs e)
+        private void Change_Button_Click_1(object sender, EventArgs e)
         {
-            if (!_patientsDao.CheckPatient((int)numericUpDown1.Value))
+            if (_checkDate == false && _checkPat == false)
             {
-                Error_Label.Text = "Error: Incorrect values!";
                 Error_Label.ForeColor = Color.Red;
-                return;
-            }
-            else if(!_appointmentsDao.CheckAppointment((int)numericUpDown2.Value))
-            {
-                Error_Label.Text = "Error: Incorrect values!";
-                Error_Label.ForeColor = Color.Red;
+                Error_Label.Text = "Помилка: перевірте значення всіх полів!";
                 return;
             }
             else
             {
                 Error_Label.Text = "";
-                Error_Label.ForeColor = Color.Black;
             }
 
+            AppointmentModel model = new AppointmentModel
+            {
+                Date = DateTime.Parse(Date_TextBox.Text),
+                DoctorName = _name,
+                DoctorSurname = _surname,
+                PatientName = PatName_TextBox.Text,
+                PatientSurname = PatSurname_TextBox.Text
+            };
+
+            _appointmentsDao.ChangeAppointment(model);
+
+            Hide();
+        }
+
+        private void CheckDate_Button_Click(object sender, EventArgs e)
+        {
             var date = DateTime.Parse(Date_TextBox.Text);
-            var appointments = _appointmentsDao.GetDoctorAppointments(_docId);
+            var appointments = _appointmentsDao.GetDoctorAppointments(_name, _surname);
 
             foreach (var item in appointments)
             {
@@ -58,27 +79,27 @@ namespace PolyclinicManagementSystem.Forms
                     {
                         if (date.Hour >= 7 && date.Hour <= 20)
                         {
-                            Date_TextBox.ForeColor = Color.Black;
-                            Error_Label.Text = "";
+                            Date_TextBox.ForeColor = Color.Green;
+                            _checkDate = true;
                         }
                         else
                         {
                             Date_TextBox.ForeColor = Color.Red;
-                            Error_Label.Text = "Error: time is incorrect!";
+                            _checkDate = false;
                             return;
                         }
                     }
                     else
                     {
                         Date_TextBox.ForeColor = Color.Red;
-                        Error_Label.Text = "Error: time is incorrect!";
+                        _checkDate = false;
                         return;
                     }
                 }
                 else
                 {
                     Date_TextBox.ForeColor = Color.Red;
-                    Error_Label.Text = "Error: time is incorrect!";
+                    _checkDate = false;
                     return;
                 }
             }
@@ -89,46 +110,63 @@ namespace PolyclinicManagementSystem.Forms
                 {
                     if (date.Hour >= 7 && date.Hour <= 20)
                     {
-                        Date_TextBox.ForeColor = Color.Black;
-                        Error_Label.Text = "";
+                        Date_TextBox.ForeColor = Color.Green;
+                        _checkDate = true;
                     }
                     else
                     {
                         Date_TextBox.ForeColor = Color.Red;
-                        Error_Label.Text = "Error: time is incorrect!";
+                        _checkDate = false;
                         return;
                     }
                 }
                 else
                 {
                     Date_TextBox.ForeColor = Color.Red;
-                    Error_Label.Text = "Error: time is incorrect!";
+                    _checkDate = false;
                     return;
                 }
             }
-
-            AppointmentModel model = new AppointmentModel
-            {
-                Id = (int)numericUpDown2.Value,
-                Date = DateTime.Parse(Date_TextBox.Text),
-                DoctorId = _docId,
-                PatientId = (int)numericUpDown1.Value
-            };
-
-            _appointmentsDao.ChangeAppointment(model);
         }
 
-        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        private void CheckPatient_Button_Click(object sender, EventArgs e)
         {
-            AppointmentModel model = _appointmentsDao.GetAppointment((int)numericUpDown2.Value);
-            if(model == null)
+            if (!_patientsDao.CheckPatient(PatName_TextBox.Text, PatSurname_TextBox.Text))
             {
-                Date_TextBox.Text = "";
-                numericUpDown1.Value = 0;
-                return;
+                PatName_TextBox.ForeColor = Color.Red;
+                PatSurname_TextBox.ForeColor = Color.Red;
+                _checkPat = false;
             }
-            Date_TextBox.Text = model.Date.ToString();
-            numericUpDown1.Value = model.PatientId;
+            else
+            {
+                PatName_TextBox.ForeColor = Color.Green;
+                PatSurname_TextBox.ForeColor = Color.Green;
+                _checkPat = true;
+            }
+        }
+
+        private void PatName_TextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (PatName_TextBox.Text.Length <= 1 || PatName_TextBox.Text.Any(c => char.IsDigit(c)))
+            {
+                PatName_TextBox.ForeColor = Color.Red;
+            }
+            else
+            {
+                PatName_TextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void PatSurname_TextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (PatSurname_TextBox.Text.Length <= 1 || PatSurname_TextBox.Text.Any(c => char.IsDigit(c)))
+            {
+                PatSurname_TextBox.ForeColor = Color.Red;
+            }
+            else
+            {
+                PatSurname_TextBox.ForeColor = Color.Black;
+            }
         }
     }
 }

@@ -68,14 +68,5 @@ namespace PolyclinicManagementSystem.Forms
                 e.Handled = true;
             }
         }
-
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-            DoctorModel model = _doctorsDao.GetDoctor((int)numericUpDown1.Value);
-            Address_TextBox.Text = model.Address;
-            Phone_TextBox.Text = model.PhoneNumber;
-            Email_TextBox.Text = model.Email;
-            Spec_ComboBox.SelectedText = model.Specialization;
-        }
     }
 }

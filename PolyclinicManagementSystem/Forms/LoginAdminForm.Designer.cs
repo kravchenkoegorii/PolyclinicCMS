@@ -63,6 +63,7 @@
             this.Password_TextBox.Size = new System.Drawing.Size(209, 20);
             this.Password_TextBox.TabIndex = 7;
             this.Password_TextBox.Text = "admin";
+            this.Password_TextBox.TextChanged += new System.EventHandler(this.Password_TextBox_TextChanged);
             // 
             // label2
             // 
@@ -81,6 +82,7 @@
             this.Email_TextBox.Size = new System.Drawing.Size(209, 20);
             this.Email_TextBox.TabIndex = 8;
             this.Email_TextBox.Text = "admin@admin.com";
+            this.Email_TextBox.TextChanged += new System.EventHandler(this.Email_TextBox_TextChanged);
             // 
             // Login_Button
             // 

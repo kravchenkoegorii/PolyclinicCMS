@@ -9,7 +9,9 @@ namespace PolyclinicManagementSystem.DAOs.Interfaces
 {
     public interface IAppointmentsDao
     {
-        List<AppointmentModel> GetDoctorAppointments(int docId);
+        List<AppointmentModel> GetDoctorAppointments(string name, string surname);
+
+        List<AppointmentModel> GetAllAppointments();
 
         void AddAppointment(AppointmentModel model);
 
@@ -17,8 +19,8 @@ namespace PolyclinicManagementSystem.DAOs.Interfaces
 
         int GetAppointmentsCount();
 
-        bool CheckAppointment(int id);
+        bool CheckAppointment(string docSurname, string patSurname);
 
-        AppointmentModel GetAppointment(int id);
+        AppointmentModel GetAppointment(string docSurname, string patSurname);
     }
 }

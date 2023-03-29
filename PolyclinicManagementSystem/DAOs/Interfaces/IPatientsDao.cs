@@ -11,10 +11,10 @@ namespace PolyclinicManagementSystem.DAOs
         
         List<PatientModel> GetAllPatients();
 
-        bool CheckPatient(int patId);
+        bool CheckPatient(string name, string surname);
 
         int GetPatientsCount();
 
-        PatientModel GetPatient(int id);
+        PatientModel GetPatient(string name, string surname);
     }
 }

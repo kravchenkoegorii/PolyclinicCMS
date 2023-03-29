@@ -52,6 +52,8 @@ namespace PolyclinicManagementSystem
             };
 
             _doctorsDao.AddDoctor(model);
+
+            Hide();
         }
 
         private void PassportCode_TextBox_KeyPress(object sender, KeyPressEventArgs e)

@@ -21,15 +21,18 @@ namespace PolyclinicManagementSystem.DAOs
 
         private IPatientsDao patientDao = new PatientsDao();
 
-        public List<AppointmentModel> GetDoctorAppointments(int docId)
+        public List<AppointmentModel> GetDoctorAppointments(string name, string surname)
         {
             List<AppointmentModel> result = new List<AppointmentModel>();
 
             MySqlConnection connection = new MySqlConnection(_connectionString);
             connection.Open();
-            string sql = $"SELECT * FROM Appointments ap WHERE ap.doctorid = @val1";
+            string sql = $"SELECT * FROM Appointments ap " +
+                $"WHERE ap.doctorname = @val1 " +
+                $"AND ap.doctorsurname = @val2";
             MySqlCommand command = new MySqlCommand(sql, connection);
-            command.Parameters.AddWithValue("@val1", docId);
+            command.Parameters.AddWithValue("@val1", name);
+            command.Parameters.AddWithValue("@val2", surname);
             command.Prepare();
 
             using (MySqlDataReader reader = command.ExecuteReader())
@@ -42,8 +45,44 @@ namespace PolyclinicManagementSystem.DAOs
                         {
                             Id = reader.GetInt32(0),
                             Date = reader.GetDateTime(1),
-                            DoctorId = reader.GetInt32(2),
-                            PatientId = reader.GetInt32(3)
+                            DoctorName = reader.GetString(2),
+                            DoctorSurname = reader.GetString(3),
+                            PatientName = reader.GetString(4),
+                            PatientSurname = reader.GetString(5)
+                        };
+                        result.Add(model);
+                    }
+                }
+            }
+
+            connection.Close();
+
+            return result;
+        }
+
+        public List<AppointmentModel> GetAllAppointments()
+        {
+            List<AppointmentModel> result = new List<AppointmentModel>();
+
+            MySqlConnection connection = new MySqlConnection(_connectionString);
+            connection.Open();
+            string sql = $"SELECT * FROM Appointments";
+            MySqlCommand command = new MySqlCommand(sql, connection);
+
+            using (MySqlDataReader reader = command.ExecuteReader())
+            {
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        AppointmentModel model = new AppointmentModel
+                        {
+                            Id = reader.GetInt32(0),
+                            Date = reader.GetDateTime(1),
+                            DoctorName = reader.GetString(2),
+                            DoctorSurname = reader.GetString(3),
+                            PatientName = reader.GetString(4),
+                            PatientSurname = reader.GetString(5)
                         };
                         result.Add(model);
                     }
@@ -87,8 +126,9 @@ namespace PolyclinicManagementSystem.DAOs
             connection.Open();
             string sql = $"SET FOREIGN_KEY_CHECKS=0;\n" +
                 $"INSERT INTO `polyclinicdb`.`appointments` " +
-                $"(`id`, `date`, `doctorid`, `patientid`) " +
-                $"VALUES ('{model.Id}', '{dateStr}', '{model.DoctorId}', '{model.PatientId}');\n" +
+                $"(`date`, `doctorname`, `doctorsurname`, `patientname`, `patientsurname`) " +
+                $"VALUES ('{dateStr}', '{model.DoctorName}', '{model.DoctorSurname}', " +
+                $"'{model.PatientName}', '{model.PatientSurname}');\n" +
                 $"SET FOREIGN_KEY_CHECKS=1;";
             MySqlCommand command = new MySqlCommand(sql, connection);
 
@@ -102,11 +142,12 @@ namespace PolyclinicManagementSystem.DAOs
             string dateStr = model.Date.ToString("yyyy-MM-dd HH:mm:ss");
             MySqlConnection connection = new MySqlConnection(_connectionString);
             connection.Open();
-            string sql = $"SET FOREIGN_KEY_CHECKS=0;\n" +
-                $"UPDATE `polyclinicdb`.`appointments` " +
-                $"SET `date` = '{dateStr}', `doctorid` = '{model.DoctorId}', " +
-                $"`patientid` = '{model.PatientId}' WHERE (`id` = '{model.Id}');\n" +
-                $"SET FOREIGN_KEY_CHECKS=1;";
+            string sql = $"UPDATE `polyclinicdb`.`appointments` " +
+                $"SET `date` = '{dateStr} '" +
+                $"WHERE `doctorname` = '{model.DoctorName}' " +
+                $"AND `doctorsurname` = '{model.DoctorSurname}' " +
+                $"AND `patientname` = '{model.PatientName}', " +
+                $"AND `patientsurname` = '{model.PatientSurname}');";
             MySqlCommand command = new MySqlCommand(sql, connection);
 
             using (MySqlDataReader reader = command.ExecuteReader()) { }
@@ -114,13 +155,16 @@ namespace PolyclinicManagementSystem.DAOs
             connection.Close();
         }
 
-        public bool CheckAppointment(int id)
+        public bool CheckAppointment(string docSurname, string patSurname)
         {
             MySqlConnection connection = new MySqlConnection(_connectionString);
             connection.Open();
-            string sql = $"SELECT ap.id FROM Appointments ap WHERE ap.id = @val1";
+            string sql = $"SELECT ap.id FROM Appointments ap " +
+                $"WHERE ap.doctorsurname = @val1 " +
+                $"AND ap.patientsurname = @val2;";
             MySqlCommand command = new MySqlCommand(sql, connection);
-            command.Parameters.AddWithValue("@val1", id);
+            command.Parameters.AddWithValue("@val1", docSurname);
+            command.Parameters.AddWithValue("@val2", patSurname);
             command.Prepare();
 
             using (MySqlDataReader reader = command.ExecuteReader())
@@ -141,13 +185,15 @@ namespace PolyclinicManagementSystem.DAOs
             }
         }
 
-        AppointmentModel IAppointmentsDao.GetAppointment(int id)
+        AppointmentModel IAppointmentsDao.GetAppointment(string docSurname, string patSurname)
         {
             AppointmentModel app = null;
 
             MySqlConnection connection = new MySqlConnection(_connectionString);
             connection.Open();
-            MySqlCommand command = new MySqlCommand($"SELECT * FROM appointments WHERE id = {id}", connection);
+            MySqlCommand command = new MySqlCommand($"SELECT * FROM appointments " +
+                $"WHERE `doctorsurname` = '{docSurname}' " +
+                $"AND `patientsurname` = '{patSurname}';", connection);
 
             using (MySqlDataReader reader = command.ExecuteReader())
             {
@@ -157,8 +203,10 @@ namespace PolyclinicManagementSystem.DAOs
                     {
                         Id = reader.GetInt32(0),
                         Date = reader.GetDateTime(1),
-                        DoctorId = reader.GetInt32(2),
-                        PatientId = reader.GetInt32(3)
+                        DoctorName = reader.GetString(2),
+                        DoctorSurname = reader.GetString(3),
+                        PatientName = reader.GetString(4),
+                        PatientSurname = reader.GetString(5)
                     };
                     break;
                 }
