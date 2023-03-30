@@ -37,19 +37,21 @@ namespace PolyclinicManagementSystem
             this.patientModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ShowAppointments_Button = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.appointmentModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.doctorNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.doctorSurnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patientNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patientSurnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.appointmentModelBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.AddAppoint_Button = new System.Windows.Forms.Button();
             this.ChangeAppoint_Button = new System.Windows.Forms.Button();
             this.AddPatient_Button = new System.Windows.Forms.Button();
+            this.ShowMyAppoint_Button = new System.Windows.Forms.Button();
+            this.appointmentModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.patientModelBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.appointmentModelBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.appointmentModelBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.appointmentModelBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DoctorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DoctorSurname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PatientName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PatientSurname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.patronymicDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,10 +59,10 @@ namespace PolyclinicManagementSystem
             this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passportCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ShowMyAppoint_Button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientModelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appointmentModelBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentModelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientModelBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentModelBindingSource1)).BeginInit();
@@ -112,21 +114,53 @@ namespace PolyclinicManagementSystem
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Date,
-            this.DoctorName,
-            this.DoctorSurname,
-            this.PatientName,
-            this.PatientSurname});
-            this.dataGridView2.Location = new System.Drawing.Point(161, 299);
+            this.dateDataGridViewTextBoxColumn,
+            this.doctorNameDataGridViewTextBoxColumn,
+            this.doctorSurnameDataGridViewTextBoxColumn,
+            this.patientNameDataGridViewTextBoxColumn,
+            this.patientSurnameDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.appointmentModelBindingSource4;
+            this.dataGridView2.Location = new System.Drawing.Point(162, 299);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(542, 168);
+            this.dataGridView2.Size = new System.Drawing.Size(544, 168);
             this.dataGridView2.TabIndex = 1;
             // 
-            // appointmentModelBindingSource
+            // dateDataGridViewTextBoxColumn
             // 
-            this.appointmentModelBindingSource.DataSource = typeof(PolyclinicManagementSystem.Models.AppointmentModel);
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Дата та час";
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            // 
+            // doctorNameDataGridViewTextBoxColumn
+            // 
+            this.doctorNameDataGridViewTextBoxColumn.DataPropertyName = "DoctorName";
+            this.doctorNameDataGridViewTextBoxColumn.HeaderText = "Ім\'я доктора";
+            this.doctorNameDataGridViewTextBoxColumn.Name = "doctorNameDataGridViewTextBoxColumn";
+            // 
+            // doctorSurnameDataGridViewTextBoxColumn
+            // 
+            this.doctorSurnameDataGridViewTextBoxColumn.DataPropertyName = "DoctorSurname";
+            this.doctorSurnameDataGridViewTextBoxColumn.HeaderText = "Прізвище доктора";
+            this.doctorSurnameDataGridViewTextBoxColumn.Name = "doctorSurnameDataGridViewTextBoxColumn";
+            // 
+            // patientNameDataGridViewTextBoxColumn
+            // 
+            this.patientNameDataGridViewTextBoxColumn.DataPropertyName = "PatientName";
+            this.patientNameDataGridViewTextBoxColumn.HeaderText = "Ім\'я пацієнта";
+            this.patientNameDataGridViewTextBoxColumn.Name = "patientNameDataGridViewTextBoxColumn";
+            // 
+            // patientSurnameDataGridViewTextBoxColumn
+            // 
+            this.patientSurnameDataGridViewTextBoxColumn.DataPropertyName = "PatientSurname";
+            this.patientSurnameDataGridViewTextBoxColumn.HeaderText = "Прізвище пацієнта";
+            this.patientSurnameDataGridViewTextBoxColumn.Name = "patientSurnameDataGridViewTextBoxColumn";
+            // 
+            // appointmentModelBindingSource4
+            // 
+            this.appointmentModelBindingSource4.DataSource = typeof(PolyclinicManagementSystem.Models.AppointmentModel);
             // 
             // AddAppoint_Button
             // 
@@ -158,6 +192,20 @@ namespace PolyclinicManagementSystem
             this.AddPatient_Button.UseVisualStyleBackColor = true;
             this.AddPatient_Button.Click += new System.EventHandler(this.AddPatient_Button_Click_1);
             // 
+            // ShowMyAppoint_Button
+            // 
+            this.ShowMyAppoint_Button.Location = new System.Drawing.Point(457, 248);
+            this.ShowMyAppoint_Button.Name = "ShowMyAppoint_Button";
+            this.ShowMyAppoint_Button.Size = new System.Drawing.Size(177, 45);
+            this.ShowMyAppoint_Button.TabIndex = 5;
+            this.ShowMyAppoint_Button.Text = "Показати мої записи";
+            this.ShowMyAppoint_Button.UseVisualStyleBackColor = true;
+            this.ShowMyAppoint_Button.Click += new System.EventHandler(this.ShowMyAppoint_Button_Click);
+            // 
+            // appointmentModelBindingSource
+            // 
+            this.appointmentModelBindingSource.DataSource = typeof(PolyclinicManagementSystem.Models.AppointmentModel);
+            // 
             // patientModelBindingSource1
             // 
             this.patientModelBindingSource1.DataSource = typeof(PolyclinicManagementSystem.Models.PatientModel);
@@ -174,31 +222,6 @@ namespace PolyclinicManagementSystem
             // 
             this.appointmentModelBindingSource3.DataSource = typeof(PolyclinicManagementSystem.Models.AppointmentModel);
             // 
-            // Date
-            // 
-            this.Date.HeaderText = "Дата та час";
-            this.Date.Name = "Date";
-            // 
-            // DoctorName
-            // 
-            this.DoctorName.HeaderText = "Ім\'я доктора";
-            this.DoctorName.Name = "DoctorName";
-            // 
-            // DoctorSurname
-            // 
-            this.DoctorSurname.HeaderText = "Прізвище доктора";
-            this.DoctorSurname.Name = "DoctorSurname";
-            // 
-            // PatientName
-            // 
-            this.PatientName.HeaderText = "Ім\'я пацієнта";
-            this.PatientName.Name = "PatientName";
-            // 
-            // PatientSurname
-            // 
-            this.PatientSurname.HeaderText = "Прізвище пацієнта";
-            this.PatientSurname.Name = "PatientSurname";
-            // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
@@ -214,7 +237,7 @@ namespace PolyclinicManagementSystem
             // patronymicDataGridViewTextBoxColumn
             // 
             this.patronymicDataGridViewTextBoxColumn.DataPropertyName = "Patronymic";
-            this.patronymicDataGridViewTextBoxColumn.HeaderText = "По-батькові";
+            this.patronymicDataGridViewTextBoxColumn.HeaderText = "По батькові";
             this.patronymicDataGridViewTextBoxColumn.Name = "patronymicDataGridViewTextBoxColumn";
             // 
             // birthDateDataGridViewTextBoxColumn
@@ -232,7 +255,7 @@ namespace PolyclinicManagementSystem
             // passportCodeDataGridViewTextBoxColumn
             // 
             this.passportCodeDataGridViewTextBoxColumn.DataPropertyName = "PassportCode";
-            this.passportCodeDataGridViewTextBoxColumn.HeaderText = "Номер паспорту";
+            this.passportCodeDataGridViewTextBoxColumn.HeaderText = "Код паспорту";
             this.passportCodeDataGridViewTextBoxColumn.Name = "passportCodeDataGridViewTextBoxColumn";
             // 
             // phoneNumberDataGridViewTextBoxColumn
@@ -240,16 +263,6 @@ namespace PolyclinicManagementSystem
             this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
             this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "Номер телефону";
             this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
-            // 
-            // ShowMyAppoint_Button
-            // 
-            this.ShowMyAppoint_Button.Location = new System.Drawing.Point(457, 248);
-            this.ShowMyAppoint_Button.Name = "ShowMyAppoint_Button";
-            this.ShowMyAppoint_Button.Size = new System.Drawing.Size(177, 45);
-            this.ShowMyAppoint_Button.TabIndex = 5;
-            this.ShowMyAppoint_Button.Text = "Показати мої записи";
-            this.ShowMyAppoint_Button.UseVisualStyleBackColor = true;
-            this.ShowMyAppoint_Button.Click += new System.EventHandler(this.ShowMyAppoint_Button_Click);
             // 
             // DoctorForm
             // 
@@ -269,6 +282,7 @@ namespace PolyclinicManagementSystem
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientModelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appointmentModelBindingSource4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentModelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientModelBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentModelBindingSource1)).EndInit();
@@ -294,6 +308,13 @@ namespace PolyclinicManagementSystem
         private System.Windows.Forms.BindingSource appointmentModelBindingSource2;
         private System.Windows.Forms.BindingSource appointmentModelBindingSource1;
         private System.Windows.Forms.BindingSource appointmentModelBindingSource3;
+        private System.Windows.Forms.Button ShowMyAppoint_Button;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn doctorNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn doctorSurnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn patientNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn patientSurnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource appointmentModelBindingSource4;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn surnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn patronymicDataGridViewTextBoxColumn;
@@ -301,11 +322,5 @@ namespace PolyclinicManagementSystem
         private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn passportCodeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DoctorName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DoctorSurname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PatientName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PatientSurname;
-        private System.Windows.Forms.Button ShowMyAppoint_Button;
     }
 }

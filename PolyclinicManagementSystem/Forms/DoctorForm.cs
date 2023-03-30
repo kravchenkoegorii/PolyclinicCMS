@@ -57,7 +57,7 @@ namespace PolyclinicManagementSystem
 
         private void AddPatient_Button_Click_1(object sender, EventArgs e)
         {
-            RegisterPatientForm regPatient = new RegisterPatientForm(_doctorDao.GetDoctor(_name, _surname).Id);
+            RegisterPatientForm regPatient = new RegisterPatientForm(_name, _surname);
             regPatient.Show();
         }
 

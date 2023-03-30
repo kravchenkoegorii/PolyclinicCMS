@@ -4,7 +4,9 @@ using PolyclinicManagementSystem.Models;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PolyclinicManagementSystem
 {
@@ -23,20 +25,12 @@ namespace PolyclinicManagementSystem
             Spec_ComboBox.DataSource = _specDao.GetAllSpec();
             Spec_ComboBox.DisplayMember = "Name";
             Spec_ComboBox.ValueMember = "Name";
-            Phone_TextBox.MaxLength = 12;
+            Spec_ComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            Spec_ComboBox.Enabled = true;
         }
 
         private void Add_Button_Click(object sender, System.EventArgs e)
         {
-            if(!Email_TextBox.Text.Contains("@"))
-            {
-                Email_TextBox.ForeColor = Color.Red;
-                return;
-            }
-            else
-            {
-                Email_TextBox.ForeColor = Color.Black;
-            }
             DoctorModel model = new DoctorModel
             {
                 Name = Name_TextBox.Text,
@@ -64,7 +58,7 @@ namespace PolyclinicManagementSystem
                 e.Handled = true;
             }
 
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            if ((e.KeyChar == '.') && ((sender as System.Windows.Forms.TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
             }
@@ -73,14 +67,93 @@ namespace PolyclinicManagementSystem
         private void Phone_TextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                (e.KeyChar != '.'))
+                (e.KeyChar != '+'))
             {
                 e.Handled = true;
             }
+        }
 
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+        private void Name_TextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (Name_TextBox.Text.Length <= 1 || Name_TextBox.Text.Any(c => char.IsDigit(c)))
             {
-                e.Handled = true;
+                Name_TextBox.ForeColor = Color.Red;
+            }
+            else
+            {
+                Name_TextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void Surname_TextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (Surname_TextBox.Text.Length <= 1 || Surname_TextBox.Text.Any(c => char.IsDigit(c)))
+            {
+                Surname_TextBox.ForeColor = Color.Red;
+            }
+            else
+            {
+                Surname_TextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void Patronymic_TextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (Patronymic_TextBox.Text.Length <= 1 || Patronymic_TextBox.Text.Any(c => char.IsDigit(c)))
+            {
+                Patronymic_TextBox.ForeColor = Color.Red;
+            }
+            else
+            {
+                Patronymic_TextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void PassportCode_TextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (PassportCode_TextBox.Text.Length != 9)
+            {
+                PassportCode_TextBox.ForeColor = Color.Red;
+            }
+            else
+            {
+                PassportCode_TextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void Phone_TextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (!Phone_TextBox.Text.Contains("+380") || Phone_TextBox.Text.Length != 13)
+            {
+                Phone_TextBox.ForeColor = Color.Red;
+            }
+            else
+            {
+                Phone_TextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void Email_TextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (!Email_TextBox.Text.Contains("@") || !Email_TextBox.Text.Contains(".") || Email_TextBox.Text == "")
+            {
+                Email_TextBox.ForeColor = Color.Red;
+            }
+            else
+            {
+                Email_TextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void Password_TextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (Password_TextBox.Text.Length < 5 || Password_TextBox.Text.Length > 20)
+            {
+                Password_TextBox.ForeColor = Color.Red;
+            }
+            else
+            {
+                Password_TextBox.ForeColor = Color.Black;
             }
         }
     }

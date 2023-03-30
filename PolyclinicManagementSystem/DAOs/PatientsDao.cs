@@ -39,12 +39,11 @@ namespace PolyclinicManagementSystem.DAOs
             string dateStr = patient.BirthDate.ToString("yyyy-MM-dd");
             MySqlConnection connection = new MySqlConnection(_connectionString);
             connection.Open();
-            string sql = $"SET FOREIGN_KEY_CHECKS=0;\n" +
-                $"INSERT INTO `polyclinicdb`.`patients` " +
-                $"(`id`, `name`, `surname`, `patronymic`, `birthdate`, `adress`, `passportcode`, `phonenumber`, `doctorid`) " +
-                $"VALUES ('{patient.Id}', '{patient.Name}', '{patient.Surname}', '{patient.Patronymic}'," +
-                $"'{dateStr}', '{patient.Address}', '{patient.PassportCode}', '{patient.PhoneNumber}', '{patient.DoctorId}');\n" +
-                $"SET FOREIGN_KEY_CHECKS=1;";
+            string sql = $"INSERT INTO `polyclinicdb`.`patients` " +
+                $"(`name`, `surname`, `patronymic`, `birthdate`, `adress`, `passportcode`, `phonenumber`, `doctorname`, `doctorsurname`) " +
+                $"VALUES ('{patient.Name}', '{patient.Surname}', '{patient.Patronymic}'," +
+                $"'{dateStr}', '{patient.Address}', '{patient.PassportCode}', " +
+                $"'{patient.PhoneNumber}', '{patient.DoctorName}', '{patient.DoctorSurname}');";
             MySqlCommand command = new MySqlCommand(sql, connection);
 
             using (MySqlDataReader reader = command.ExecuteReader()) { }
@@ -56,11 +55,10 @@ namespace PolyclinicManagementSystem.DAOs
         {
             MySqlConnection connection = new MySqlConnection(_connectionString);
             connection.Open();
-            string sql = $"SET FOREIGN_KEY_CHECKS=0;\n" +
-            $"UPDATE `polyclinicdb`.`patients` " +
+            string sql = $"UPDATE `polyclinicdb`.`patients` " +
             $"SET `adress` = '{newPatient.Address}', `phonenumber` = '{newPatient.PhoneNumber}' " +
-            $"WHERE (`id` = '{newPatient.Id}');" +
-            $"SET FOREIGN_KEY_CHECKS=1;";
+            $"WHERE `name` = '{newPatient.Name}'" +
+            $"AND `surname` = '{newPatient.Surname}';";
             MySqlCommand command = new MySqlCommand(sql, connection);
             using (MySqlDataReader reader = command.ExecuteReader()) { }
 
@@ -89,7 +87,8 @@ namespace PolyclinicManagementSystem.DAOs
                         Address = reader.GetString(5),
                         PassportCode = reader.GetString(6),
                         PhoneNumber = reader.GetString(7),
-                        DoctorId = reader.GetInt32(8)
+                        DoctorName = reader.GetString(8),
+                        DoctorSurname = reader.GetString(9)
                     };
                     results.Add(patient);
                 }
@@ -133,7 +132,7 @@ namespace PolyclinicManagementSystem.DAOs
 
         PatientModel IPatientsDao.GetPatient(string name, string surname)
         {
-            PatientModel pat = null;
+            PatientModel pat = new PatientModel();
 
             MySqlConnection connection = new MySqlConnection(_connectionString);
             connection.Open();
@@ -155,7 +154,8 @@ namespace PolyclinicManagementSystem.DAOs
                         Address = reader.GetString(5),
                         PassportCode = reader.GetString(6),
                         PhoneNumber = reader.GetString(7),
-                        DoctorId = reader.GetInt32(8)
+                        DoctorName = reader.GetString(8),
+                        DoctorSurname = reader.GetString(9)
                     };
                     break;
                 }

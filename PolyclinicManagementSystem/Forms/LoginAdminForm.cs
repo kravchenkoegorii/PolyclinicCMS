@@ -34,7 +34,7 @@ namespace PolyclinicManagementSystem.Forms
             else
             {
                 Error_Label.ForeColor = Color.Red;
-                Error_Label.Text = "User does not found!";
+                Error_Label.Text = "Користувач не знайдений!";
             }
         }
 

@@ -1,6 +1,5 @@
 ﻿using PolyclinicManagementSystem.DAOs;
 using PolyclinicManagementSystem.Models;
-using ScottPlot;
 using System;
 using System.Drawing;
 using System.Globalization;
@@ -11,15 +10,21 @@ namespace PolyclinicManagementSystem
 {
     public partial class RegisterPatientForm : Form
     {
-        private int _docId;
+        private string _name;
+
+        private string _surname;
 
         private IPatientsDao _patientsDao;
 
-        public RegisterPatientForm(int docId)
+        private IDoctorsDao _doctorsDao;
+
+        public RegisterPatientForm(string name, string surname)
         {
             InitializeComponent();
             _patientsDao = new PatientsDao();
-            _docId = docId;
+            _doctorsDao = new DoctorsDao();
+            _name = name;
+            _surname = surname;
         }
 
         private void Add_Button_Click(object sender, System.EventArgs e)
@@ -34,7 +39,8 @@ namespace PolyclinicManagementSystem
                 Address = Adress_TextBox.Text,
                 PassportCode = PassportCode_TextBox.Text,
                 PhoneNumber = Phone_TextBox.Text,
-                DoctorId = _docId
+                DoctorName = _name,
+                DoctorSurname = _surname
             };
 
             _patientsDao.AddPattient(model);
@@ -92,13 +98,13 @@ namespace PolyclinicManagementSystem
 
         private void Phone_TextBox_TextChanged(object sender, EventArgs e)
         {
-            if (!Phone_TextBox.Text.Contains("+380") || Phone_TextBox.Text.Length <= 13)
+            if (!Phone_TextBox.Text.Contains("+380") || Phone_TextBox.Text.Length != 13)
             {
                 Phone_TextBox.ForeColor = Color.Red;
             }
             else
             {
-                Phone_TextBox.ForeColor = Color.Red;
+                Phone_TextBox.ForeColor = Color.Black;
             }
         }
 

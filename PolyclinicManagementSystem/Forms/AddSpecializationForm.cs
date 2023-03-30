@@ -32,5 +32,17 @@ namespace PolyclinicManagementSystem.Forms
 
             _specDao.AddSpec(model);
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox1.Text.Length <= 1 || textBox1.Text.Any(c => char.IsDigit(c)))
+            {
+                textBox1.ForeColor = Color.Red;
+            }
+            else
+            {
+                textBox1.ForeColor = Color.Black;
+            }
+        }
     }
 }

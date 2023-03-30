@@ -78,13 +78,10 @@ C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\Polyc
 C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.Forms.LoginAdminForm.resources
 C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.RegisterDoctorForm.resources
 C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.Forms.AddSpecializationForm.resources
-C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\ScottPlot.dll
-C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\ScottPlot.WinForms.dll
 C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\System.Drawing.Common.dll
 C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\System.IO.Pipelines.dll
 C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\System.Threading.Tasks.Extensions.dll
 C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\System.ValueTuple.dll
-C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\ScottPlot.xml
 C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\System.IO.Pipelines.xml
 C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\System.ValueTuple.xml
@@ -145,3 +142,13 @@ C:\Users\mity-\Downloads\CMS\PolyclinicCMS\PolyclinicManagementSystem\obj\Debug\
 C:\Users\mity-\Downloads\CMS\PolyclinicCMS\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.csproj.CopyComplete
 C:\Users\mity-\Downloads\CMS\PolyclinicCMS\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.exe
 C:\Users\mity-\Downloads\CMS\PolyclinicCMS\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.pdb
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\LiveCharts.dll
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\LiveCharts.WinForms.dll
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\LiveCharts.pdb
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\LiveCharts.xml
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\LiveCharts.WinForms.pdb
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\LiveCharts.WinForms.xml
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\bin\Debug\System.Drawing.Common.xml

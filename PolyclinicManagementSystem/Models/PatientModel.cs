@@ -20,6 +20,8 @@ namespace PolyclinicManagementSystem.Models
         
         public string PhoneNumber { get; set; }
 
-        public int DoctorId { get; set; }
+        public string DoctorName { get; set; }
+
+        public string DoctorSurname { get; set; }
     }
 }

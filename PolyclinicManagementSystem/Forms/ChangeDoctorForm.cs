@@ -19,6 +19,8 @@ namespace PolyclinicManagementSystem.Forms
 
         private ISpecializationDao _specDao;
 
+        private bool _isFound = false;
+
         public ChangeDoctorForm()
         {
             InitializeComponent();
@@ -28,24 +30,21 @@ namespace PolyclinicManagementSystem.Forms
             Spec_ComboBox.DataSource = _specDao.GetAllSpec();
             Spec_ComboBox.DisplayMember = "Name";
             Spec_ComboBox.ValueMember = "Name";
-            Phone_TextBox.MaxLength = 12;
+            Spec_ComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            Spec_ComboBox.Enabled = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (!Email_TextBox.Text.Contains("@"))
+            if(_isFound == false)
             {
-                Email_TextBox.ForeColor = Color.Red;
                 return;
-            }
-            else
-            {
-                Email_TextBox.ForeColor = Color.Black;
             }
 
             DoctorModel model = new DoctorModel
             {
-                Id = (int)numericUpDown1.Value,
+                Name = Name_TextBox.Text,
+                Surname = Surname_TextBox.Text,
                 Address = Address_TextBox.Text,
                 PhoneNumber = Phone_TextBox.Text,
                 Email = Email_TextBox.Text,
@@ -53,19 +52,65 @@ namespace PolyclinicManagementSystem.Forms
             };
 
             _doctorsDao.ChangeDoctor(model);
+
+            Hide();
         }
 
         private void Phone_TextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                (e.KeyChar != '.'))
+                (e.KeyChar != '+'))
             {
                 e.Handled = true;
             }
+        }
 
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+        private void Phone_TextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (!Phone_TextBox.Text.Contains("+380") || Phone_TextBox.Text.Length != 13)
             {
-                e.Handled = true;
+                Phone_TextBox.ForeColor = Color.Red;
+            }
+            else
+            {
+                Phone_TextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void Email_TextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (!Email_TextBox.Text.Contains("@") || !Email_TextBox.Text.Contains(".") || Email_TextBox.Text == "")
+            {
+                Email_TextBox.ForeColor = Color.Red;
+            }
+            else
+            {
+                Email_TextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var doctor = _doctorsDao.GetDoctor(Name_TextBox.Text, Surname_TextBox.Text);
+            if(string.IsNullOrEmpty(doctor.Name) || string.IsNullOrEmpty(doctor.Surname))
+            {
+                Name_TextBox.ForeColor = Color.Red;
+                Surname_TextBox.ForeColor = Color.Red;
+                _isFound = false;
+                return;
+            }
+            else
+            {
+                Name_TextBox.ForeColor = Color.Green;
+                Surname_TextBox.ForeColor = Color.Green;
+                Name_TextBox.Enabled = false;
+                Surname_TextBox.Enabled = false;
+                _isFound = true;
+
+                Address_TextBox.Text = doctor.Address;
+                Phone_TextBox.Text = doctor.PhoneNumber;
+                Email_TextBox.Text = doctor.Email;
+                Spec_ComboBox.SelectedValue = doctor.Specialization;
             }
         }
     }

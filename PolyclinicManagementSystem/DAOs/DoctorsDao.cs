@@ -69,7 +69,9 @@ namespace PolyclinicManagementSystem.DAOs
 
             MySqlConnection connection = new MySqlConnection(_connectionString);
             connection.Open();
-            MySqlCommand command = new MySqlCommand($"SELECT * FROM patients WHERE doctorid = {id}", connection);
+            MySqlCommand command = new MySqlCommand($"SELECT * FROM patients " +
+                $"WHERE `doctorname` = '{name}' " +
+                $"AND `doctorsurname` = '{surname}';", connection);
 
             using (MySqlDataReader reader = command.ExecuteReader())
             {
@@ -85,7 +87,8 @@ namespace PolyclinicManagementSystem.DAOs
                         Address = reader.GetString(5),
                         PassportCode = reader.GetString(6),
                         PhoneNumber = reader.GetString(7),
-                        DoctorId = reader.GetInt32(8)
+                        DoctorName = reader.GetString(8),
+                        DoctorSurname = reader.GetString(9)
                     };
                     results.Add(patient);
                 }
@@ -158,12 +161,11 @@ namespace PolyclinicManagementSystem.DAOs
         {
             MySqlConnection connection = new MySqlConnection(_connectionString);
             connection.Open();
-            string sql = $"SET FOREIGN_KEY_CHECKS=0;\n" +
-            $"UPDATE `polyclinicdb`.`doctors` " +
+            string sql = $"UPDATE `polyclinicdb`.`doctors` " +
             $"SET `adress` = '{newDoctor.Address}', `phonenumber` = '{newDoctor.PhoneNumber}', " +
             $"`email` = '{newDoctor.Email}', `specialization` = '{newDoctor.Specialization}' " +
-            $"WHERE (`id` = '{newDoctor.Id}');\n" +
-            $"SET FOREIGN_KEY_CHECKS=1;";
+            $"WHERE `name` = '{newDoctor.Name}' " +
+            $"AND `surname` = '{newDoctor.Surname}';";
             MySqlCommand command = new MySqlCommand(sql, connection);
             using (MySqlDataReader reader = command.ExecuteReader()) { }
 

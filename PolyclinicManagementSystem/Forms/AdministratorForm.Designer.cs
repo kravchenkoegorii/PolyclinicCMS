@@ -34,7 +34,6 @@ namespace PolyclinicManagementSystem
             this.components = new System.ComponentModel.Container();
             this.ShowDoctors_Button = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.patronymicDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,12 +43,15 @@ namespace PolyclinicManagementSystem
             this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.specializationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.doctorModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.AddDoctor_Button = new System.Windows.Forms.Button();
             this.ChangeDoctor_Button = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patientModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ChangePatient_Button = new System.Windows.Forms.Button();
+            this.ShowPatients_Button = new System.Windows.Forms.Button();
+            this.AddSpec_Button = new System.Windows.Forms.Button();
+            this.Graphic_Button = new System.Windows.Forms.Button();
             this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.surnameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.patronymicDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,12 +59,8 @@ namespace PolyclinicManagementSystem
             this.addressDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passportCodeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneNumberDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.doctorIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.patientModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ChangePatient_Button = new System.Windows.Forms.Button();
-            this.ShowPatients_Button = new System.Windows.Forms.Button();
-            this.AddSpec_Button = new System.Windows.Forms.Button();
-            this.Graphic_Button = new System.Windows.Forms.Button();
+            this.doctorNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.doctorSurnameataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorModelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -75,7 +73,7 @@ namespace PolyclinicManagementSystem
             this.ShowDoctors_Button.Name = "ShowDoctors_Button";
             this.ShowDoctors_Button.Size = new System.Drawing.Size(139, 56);
             this.ShowDoctors_Button.TabIndex = 0;
-            this.ShowDoctors_Button.Text = "Show doctors";
+            this.ShowDoctors_Button.Text = "Переглянути всіх докторів";
             this.ShowDoctors_Button.UseVisualStyleBackColor = true;
             this.ShowDoctors_Button.Click += new System.EventHandler(this.ShowDoctors_Button_Click);
             // 
@@ -84,7 +82,6 @@ namespace PolyclinicManagementSystem
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
             this.nameDataGridViewTextBoxColumn,
             this.surnameDataGridViewTextBoxColumn,
             this.patronymicDataGridViewTextBoxColumn,
@@ -93,79 +90,66 @@ namespace PolyclinicManagementSystem
             this.passportCodeDataGridViewTextBoxColumn,
             this.phoneNumberDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn,
-            this.specializationDataGridViewTextBoxColumn,
-            this.passwordDataGridViewTextBoxColumn});
+            this.specializationDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.doctorModelBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(157, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(701, 177);
             this.dataGridView1.TabIndex = 1;
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Ім\'я";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             // 
             // surnameDataGridViewTextBoxColumn
             // 
             this.surnameDataGridViewTextBoxColumn.DataPropertyName = "Surname";
-            this.surnameDataGridViewTextBoxColumn.HeaderText = "Surname";
+            this.surnameDataGridViewTextBoxColumn.HeaderText = "Прізвище";
             this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
             // 
             // patronymicDataGridViewTextBoxColumn
             // 
             this.patronymicDataGridViewTextBoxColumn.DataPropertyName = "Patronymic";
-            this.patronymicDataGridViewTextBoxColumn.HeaderText = "Patronymic";
+            this.patronymicDataGridViewTextBoxColumn.HeaderText = "По батькові";
             this.patronymicDataGridViewTextBoxColumn.Name = "patronymicDataGridViewTextBoxColumn";
             // 
             // birthDateDataGridViewTextBoxColumn
             // 
             this.birthDateDataGridViewTextBoxColumn.DataPropertyName = "BirthDate";
-            this.birthDateDataGridViewTextBoxColumn.HeaderText = "BirthDate";
+            this.birthDateDataGridViewTextBoxColumn.HeaderText = "Дата народження";
             this.birthDateDataGridViewTextBoxColumn.Name = "birthDateDataGridViewTextBoxColumn";
             // 
             // addressDataGridViewTextBoxColumn
             // 
             this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "Адреса";
             this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
             // 
             // passportCodeDataGridViewTextBoxColumn
             // 
             this.passportCodeDataGridViewTextBoxColumn.DataPropertyName = "PassportCode";
-            this.passportCodeDataGridViewTextBoxColumn.HeaderText = "PassportCode";
+            this.passportCodeDataGridViewTextBoxColumn.HeaderText = "Код паспорту";
             this.passportCodeDataGridViewTextBoxColumn.Name = "passportCodeDataGridViewTextBoxColumn";
             // 
             // phoneNumberDataGridViewTextBoxColumn
             // 
             this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "Номер телефону";
             this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
             // 
             // emailDataGridViewTextBoxColumn
             // 
             this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Ел. адреса";
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
             // 
             // specializationDataGridViewTextBoxColumn
             // 
             this.specializationDataGridViewTextBoxColumn.DataPropertyName = "Specialization";
-            this.specializationDataGridViewTextBoxColumn.HeaderText = "Specialization";
+            this.specializationDataGridViewTextBoxColumn.HeaderText = "Спеціалізація";
             this.specializationDataGridViewTextBoxColumn.Name = "specializationDataGridViewTextBoxColumn";
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
             // 
             // doctorModelBindingSource
             // 
@@ -177,7 +161,7 @@ namespace PolyclinicManagementSystem
             this.AddDoctor_Button.Name = "AddDoctor_Button";
             this.AddDoctor_Button.Size = new System.Drawing.Size(139, 56);
             this.AddDoctor_Button.TabIndex = 0;
-            this.AddDoctor_Button.Text = "Add doctor";
+            this.AddDoctor_Button.Text = "Додати доктора";
             this.AddDoctor_Button.UseVisualStyleBackColor = true;
             this.AddDoctor_Button.Click += new System.EventHandler(this.AddDoctor_Button_Click);
             // 
@@ -187,7 +171,7 @@ namespace PolyclinicManagementSystem
             this.ChangeDoctor_Button.Name = "ChangeDoctor_Button";
             this.ChangeDoctor_Button.Size = new System.Drawing.Size(139, 56);
             this.ChangeDoctor_Button.TabIndex = 0;
-            this.ChangeDoctor_Button.Text = "Change doctor";
+            this.ChangeDoctor_Button.Text = "Змінити доктора";
             this.ChangeDoctor_Button.UseVisualStyleBackColor = true;
             this.ChangeDoctor_Button.Click += new System.EventHandler(this.ChangeDoctor_Button_Click);
             // 
@@ -196,7 +180,6 @@ namespace PolyclinicManagementSystem
             this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn1,
             this.nameDataGridViewTextBoxColumn1,
             this.surnameDataGridViewTextBoxColumn1,
             this.patronymicDataGridViewTextBoxColumn1,
@@ -204,66 +187,13 @@ namespace PolyclinicManagementSystem
             this.addressDataGridViewTextBoxColumn1,
             this.passportCodeDataGridViewTextBoxColumn1,
             this.phoneNumberDataGridViewTextBoxColumn1,
-            this.doctorIdDataGridViewTextBoxColumn});
+            this.doctorNameDataGridViewTextBoxColumn,
+            this.doctorSurnameataGridViewTextBoxColumn});
             this.dataGridView2.DataSource = this.patientModelBindingSource;
             this.dataGridView2.Location = new System.Drawing.Point(157, 216);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(701, 177);
             this.dataGridView2.TabIndex = 1;
-            // 
-            // idDataGridViewTextBoxColumn1
-            // 
-            this.idDataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
-            // 
-            // nameDataGridViewTextBoxColumn1
-            // 
-            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn1.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
-            // 
-            // surnameDataGridViewTextBoxColumn1
-            // 
-            this.surnameDataGridViewTextBoxColumn1.DataPropertyName = "Surname";
-            this.surnameDataGridViewTextBoxColumn1.HeaderText = "Surname";
-            this.surnameDataGridViewTextBoxColumn1.Name = "surnameDataGridViewTextBoxColumn1";
-            // 
-            // patronymicDataGridViewTextBoxColumn1
-            // 
-            this.patronymicDataGridViewTextBoxColumn1.DataPropertyName = "Patronymic";
-            this.patronymicDataGridViewTextBoxColumn1.HeaderText = "Patronymic";
-            this.patronymicDataGridViewTextBoxColumn1.Name = "patronymicDataGridViewTextBoxColumn1";
-            // 
-            // birthDateDataGridViewTextBoxColumn1
-            // 
-            this.birthDateDataGridViewTextBoxColumn1.DataPropertyName = "BirthDate";
-            this.birthDateDataGridViewTextBoxColumn1.HeaderText = "BirthDate";
-            this.birthDateDataGridViewTextBoxColumn1.Name = "birthDateDataGridViewTextBoxColumn1";
-            // 
-            // addressDataGridViewTextBoxColumn1
-            // 
-            this.addressDataGridViewTextBoxColumn1.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn1.HeaderText = "Address";
-            this.addressDataGridViewTextBoxColumn1.Name = "addressDataGridViewTextBoxColumn1";
-            // 
-            // passportCodeDataGridViewTextBoxColumn1
-            // 
-            this.passportCodeDataGridViewTextBoxColumn1.DataPropertyName = "PassportCode";
-            this.passportCodeDataGridViewTextBoxColumn1.HeaderText = "PassportCode";
-            this.passportCodeDataGridViewTextBoxColumn1.Name = "passportCodeDataGridViewTextBoxColumn1";
-            // 
-            // phoneNumberDataGridViewTextBoxColumn1
-            // 
-            this.phoneNumberDataGridViewTextBoxColumn1.DataPropertyName = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn1.HeaderText = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn1.Name = "phoneNumberDataGridViewTextBoxColumn1";
-            // 
-            // doctorIdDataGridViewTextBoxColumn
-            // 
-            this.doctorIdDataGridViewTextBoxColumn.DataPropertyName = "DoctorId";
-            this.doctorIdDataGridViewTextBoxColumn.HeaderText = "DoctorId";
-            this.doctorIdDataGridViewTextBoxColumn.Name = "doctorIdDataGridViewTextBoxColumn";
             // 
             // patientModelBindingSource
             // 
@@ -275,7 +205,7 @@ namespace PolyclinicManagementSystem
             this.ChangePatient_Button.Name = "ChangePatient_Button";
             this.ChangePatient_Button.Size = new System.Drawing.Size(139, 56);
             this.ChangePatient_Button.TabIndex = 0;
-            this.ChangePatient_Button.Text = "Change patient";
+            this.ChangePatient_Button.Text = "Змінити пацієнта";
             this.ChangePatient_Button.UseVisualStyleBackColor = true;
             this.ChangePatient_Button.Click += new System.EventHandler(this.ChangePatient_Button_Click);
             // 
@@ -285,7 +215,7 @@ namespace PolyclinicManagementSystem
             this.ShowPatients_Button.Name = "ShowPatients_Button";
             this.ShowPatients_Button.Size = new System.Drawing.Size(138, 56);
             this.ShowPatients_Button.TabIndex = 2;
-            this.ShowPatients_Button.Text = "Show patients";
+            this.ShowPatients_Button.Text = "Переглянути всіх пацієнтів";
             this.ShowPatients_Button.UseVisualStyleBackColor = true;
             this.ShowPatients_Button.Click += new System.EventHandler(this.ShowPatients_Button_Click);
             // 
@@ -295,7 +225,7 @@ namespace PolyclinicManagementSystem
             this.AddSpec_Button.Name = "AddSpec_Button";
             this.AddSpec_Button.Size = new System.Drawing.Size(138, 55);
             this.AddSpec_Button.TabIndex = 3;
-            this.AddSpec_Button.Text = "Add specialization";
+            this.AddSpec_Button.Text = "Додати нову спеціалізацію";
             this.AddSpec_Button.UseVisualStyleBackColor = true;
             this.AddSpec_Button.Click += new System.EventHandler(this.AddSpec_Button_Click);
             // 
@@ -305,9 +235,63 @@ namespace PolyclinicManagementSystem
             this.Graphic_Button.Name = "Graphic_Button";
             this.Graphic_Button.Size = new System.Drawing.Size(136, 55);
             this.Graphic_Button.TabIndex = 4;
-            this.Graphic_Button.Text = "Graphic";
+            this.Graphic_Button.Text = "Статистика";
             this.Graphic_Button.UseVisualStyleBackColor = true;
             this.Graphic_Button.Click += new System.EventHandler(this.Graphic_Button_Click);
+            // 
+            // nameDataGridViewTextBoxColumn1
+            // 
+            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn1.HeaderText = "Ім\'я";
+            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
+            // 
+            // surnameDataGridViewTextBoxColumn1
+            // 
+            this.surnameDataGridViewTextBoxColumn1.DataPropertyName = "Surname";
+            this.surnameDataGridViewTextBoxColumn1.HeaderText = "Прізвище";
+            this.surnameDataGridViewTextBoxColumn1.Name = "surnameDataGridViewTextBoxColumn1";
+            // 
+            // patronymicDataGridViewTextBoxColumn1
+            // 
+            this.patronymicDataGridViewTextBoxColumn1.DataPropertyName = "Patronymic";
+            this.patronymicDataGridViewTextBoxColumn1.HeaderText = "По батькові";
+            this.patronymicDataGridViewTextBoxColumn1.Name = "patronymicDataGridViewTextBoxColumn1";
+            // 
+            // birthDateDataGridViewTextBoxColumn1
+            // 
+            this.birthDateDataGridViewTextBoxColumn1.DataPropertyName = "BirthDate";
+            this.birthDateDataGridViewTextBoxColumn1.HeaderText = "Дата народження";
+            this.birthDateDataGridViewTextBoxColumn1.Name = "birthDateDataGridViewTextBoxColumn1";
+            // 
+            // addressDataGridViewTextBoxColumn1
+            // 
+            this.addressDataGridViewTextBoxColumn1.DataPropertyName = "Address";
+            this.addressDataGridViewTextBoxColumn1.HeaderText = "Адреса";
+            this.addressDataGridViewTextBoxColumn1.Name = "addressDataGridViewTextBoxColumn1";
+            // 
+            // passportCodeDataGridViewTextBoxColumn1
+            // 
+            this.passportCodeDataGridViewTextBoxColumn1.DataPropertyName = "PassportCode";
+            this.passportCodeDataGridViewTextBoxColumn1.HeaderText = "Код паспорту";
+            this.passportCodeDataGridViewTextBoxColumn1.Name = "passportCodeDataGridViewTextBoxColumn1";
+            // 
+            // phoneNumberDataGridViewTextBoxColumn1
+            // 
+            this.phoneNumberDataGridViewTextBoxColumn1.DataPropertyName = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn1.HeaderText = "Номер телефону";
+            this.phoneNumberDataGridViewTextBoxColumn1.Name = "phoneNumberDataGridViewTextBoxColumn1";
+            // 
+            // doctorNameDataGridViewTextBoxColumn
+            // 
+            this.doctorNameDataGridViewTextBoxColumn.DataPropertyName = "DoctorName";
+            this.doctorNameDataGridViewTextBoxColumn.HeaderText = "Ім\'я доктора";
+            this.doctorNameDataGridViewTextBoxColumn.Name = "doctorNameDataGridViewTextBoxColumn";
+            // 
+            // doctorSurnameataGridViewTextBoxColumn
+            // 
+            this.doctorSurnameataGridViewTextBoxColumn.DataPropertyName = "DoctorSurname";
+            this.doctorSurnameataGridViewTextBoxColumn.HeaderText = "Прізвище доктора";
+            this.doctorSurnameataGridViewTextBoxColumn.Name = "doctorSurnameataGridViewTextBoxColumn";
             // 
             // AdministratorForm
             // 
@@ -324,7 +308,7 @@ namespace PolyclinicManagementSystem
             this.Controls.Add(this.AddDoctor_Button);
             this.Controls.Add(this.ShowDoctors_Button);
             this.Name = "AdministratorForm";
-            this.Text = "AdministratorForm";
+            this.Text = "Головне вікно (Адміністратор)";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorModelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -342,7 +326,10 @@ namespace PolyclinicManagementSystem
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button ChangePatient_Button;
         private System.Windows.Forms.Button ShowPatients_Button;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource doctorModelBindingSource;
+        private System.Windows.Forms.BindingSource patientModelBindingSource;
+        private System.Windows.Forms.Button AddSpec_Button;
+        private System.Windows.Forms.Button Graphic_Button;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn surnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn patronymicDataGridViewTextBoxColumn;
@@ -352,9 +339,6 @@ namespace PolyclinicManagementSystem
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn specializationDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource doctorModelBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn surnameDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn patronymicDataGridViewTextBoxColumn1;
@@ -362,9 +346,7 @@ namespace PolyclinicManagementSystem
         private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn passportCodeDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn doctorIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource patientModelBindingSource;
-        private System.Windows.Forms.Button AddSpec_Button;
-        private System.Windows.Forms.Button Graphic_Button;
+        private System.Windows.Forms.DataGridViewTextBoxColumn doctorNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn doctorSurnameataGridViewTextBoxColumn;
     }
 }

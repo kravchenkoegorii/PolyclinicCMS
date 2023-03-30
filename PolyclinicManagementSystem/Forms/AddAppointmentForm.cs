@@ -1,7 +1,6 @@
 ﻿using PolyclinicManagementSystem.DAOs;
 using PolyclinicManagementSystem.DAOs.Interfaces;
 using PolyclinicManagementSystem.Models;
-using ScottPlot;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
