@@ -2,7 +2,6 @@
 using PolyclinicManagementSystem.Models;
 using System;
 using System.Drawing;
-using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -86,7 +85,7 @@ namespace PolyclinicManagementSystem
 
         private void PassportCode_TextBox_TextChanged(object sender, EventArgs e)
         {
-            if(PassportCode_TextBox.Text.Length != 9)
+            if (PassportCode_TextBox.Text.Length != 9)
             {
                 PassportCode_TextBox.ForeColor = Color.Red;
             }
@@ -123,7 +122,7 @@ namespace PolyclinicManagementSystem
         }
 
         private void Phone_TextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {       
+        {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
                 (e.KeyChar != '+'))
             {

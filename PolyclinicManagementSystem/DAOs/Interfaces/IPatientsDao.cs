@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using PolyclinicManagementSystem.Models;
+﻿using PolyclinicManagementSystem.Models;
+using System.Collections.Generic;
 
 namespace PolyclinicManagementSystem.DAOs
 {
@@ -8,7 +8,7 @@ namespace PolyclinicManagementSystem.DAOs
         void AddPattient(PatientModel patient);
 
         void ChangePatient(PatientModel newPatient);
-        
+
         List<PatientModel> GetAllPatients();
 
         bool CheckPatient(string name, string surname);

@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using PolyclinicManagementSystem.Models;
+﻿using PolyclinicManagementSystem.Models;
+using System.Collections.Generic;
 
 namespace PolyclinicManagementSystem.DAOs
 {
@@ -14,7 +14,7 @@ namespace PolyclinicManagementSystem.DAOs
         void ChangeDoctor(DoctorModel newDoctor);
 
         List<DoctorModel> GetAllDoctors();
-        
+
         List<PatientModel> GetAllDoctorPatients(string name, string surname);
 
         bool LoginDoctor(string email, string password);

@@ -2,13 +2,8 @@
 using PolyclinicManagementSystem.DAOs.Interfaces;
 using PolyclinicManagementSystem.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PolyclinicManagementSystem.Forms
@@ -45,7 +40,7 @@ namespace PolyclinicManagementSystem.Forms
 
         private void Add_Button_Click(object sender, EventArgs e)
         {
-            if(_checkDate == false || _checkDoc == false || _checkPat == false)
+            if (_checkDate == false || _checkDoc == false || _checkPat == false)
             {
                 Error_Label.ForeColor = Color.Red;
                 Error_Label.Text = "Помилка: перевірте значення всіх полів!";
@@ -107,6 +102,10 @@ namespace PolyclinicManagementSystem.Forms
 
         private void CheckDate_Button_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(Date_TextBox.Text))
+            {
+                return;
+            }
             var date = DateTime.Parse(Date_TextBox.Text);
             var appointments = _appointmentsDao.GetDoctorAppointments(_name, _surname);
 

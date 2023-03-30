@@ -1,7 +1,6 @@
-﻿using System.Collections.Generic;
-using MySql.Data.MySqlClient;
-using MySqlX.XDevAPI.Common;
+﻿using MySql.Data.MySqlClient;
 using PolyclinicManagementSystem.Models;
+using System.Collections.Generic;
 
 namespace PolyclinicManagementSystem.DAOs
 {
@@ -96,7 +95,7 @@ namespace PolyclinicManagementSystem.DAOs
 
             connection.Close();
 
-            return results; 
+            return results;
         }
 
         public bool CheckPatient(string name, string surname)
@@ -113,13 +112,13 @@ namespace PolyclinicManagementSystem.DAOs
 
             using (MySqlDataReader reader = command.ExecuteReader())
             {
-                if(reader.HasRows)
+                if (reader.HasRows)
                 {
                     while (reader.Read())
                     {
                         name = reader.GetString(0);
                         surname = reader.GetString(1);
-                        if(string.IsNullOrEmpty(name) && string.IsNullOrEmpty(surname))
+                        if (string.IsNullOrEmpty(name) && string.IsNullOrEmpty(surname))
                         {
                             return false;
                         }

@@ -1,5 +1,4 @@
 ﻿using PolyclinicManagementSystem.DAOs;
-using PolyclinicManagementSystem.DAOs.Interfaces;
 using PolyclinicManagementSystem.Forms;
 using System.Windows.Forms;
 

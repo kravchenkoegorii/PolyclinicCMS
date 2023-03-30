@@ -1,14 +1,14 @@
-﻿using System;
+﻿using PolyclinicManagementSystem.DAOs;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
-using PolyclinicManagementSystem.DAOs;
 
 namespace PolyclinicManagementSystem
 {
     public partial class LoginDoctorForm : Form
     {
         private IDoctorsDao _doctorsDao;
-        
+
         public LoginDoctorForm()
         {
             InitializeComponent();
@@ -45,7 +45,7 @@ namespace PolyclinicManagementSystem
 
         private void Password_TextBox_TextChanged(object sender, EventArgs e)
         {
-            if(Password_TextBox.Text.Length < 5 || Password_TextBox.Text.Length > 20)
+            if (Password_TextBox.Text.Length < 5 || Password_TextBox.Text.Length > 20)
             {
                 Password_TextBox.ForeColor = Color.Red;
             }

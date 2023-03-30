@@ -1,11 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using PolyclinicManagementSystem.DAOs.Interfaces;
 using PolyclinicManagementSystem.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PolyclinicManagementSystem.DAOs
 {

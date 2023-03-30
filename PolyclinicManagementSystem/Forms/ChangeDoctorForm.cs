@@ -2,13 +2,7 @@
 using PolyclinicManagementSystem.DAOs.Interfaces;
 using PolyclinicManagementSystem.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PolyclinicManagementSystem.Forms
@@ -36,7 +30,7 @@ namespace PolyclinicManagementSystem.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(_isFound == false)
+            if (_isFound == false)
             {
                 return;
             }
@@ -92,7 +86,7 @@ namespace PolyclinicManagementSystem.Forms
         private void button2_Click(object sender, EventArgs e)
         {
             var doctor = _doctorsDao.GetDoctor(Name_TextBox.Text, Surname_TextBox.Text);
-            if(string.IsNullOrEmpty(doctor.Name) || string.IsNullOrEmpty(doctor.Surname))
+            if (string.IsNullOrEmpty(doctor.Name) || string.IsNullOrEmpty(doctor.Surname))
             {
                 Name_TextBox.ForeColor = Color.Red;
                 Surname_TextBox.ForeColor = Color.Red;

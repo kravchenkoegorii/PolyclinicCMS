@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Numerics;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using PolyclinicManagementSystem.Models;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Collections.Generic;
 
 namespace PolyclinicManagementSystem.DAOs
 {

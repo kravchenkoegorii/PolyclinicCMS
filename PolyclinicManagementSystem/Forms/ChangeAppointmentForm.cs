@@ -1,14 +1,9 @@
-﻿using PolyclinicManagementSystem.DAOs.Interfaces;
-using PolyclinicManagementSystem.DAOs;
+﻿using PolyclinicManagementSystem.DAOs;
+using PolyclinicManagementSystem.DAOs.Interfaces;
 using PolyclinicManagementSystem.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PolyclinicManagementSystem.Forms
