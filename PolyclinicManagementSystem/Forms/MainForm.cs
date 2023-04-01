@@ -15,14 +15,12 @@ namespace PolyclinicManagementSystem
         {
             LoginDoctorForm docLogin = new LoginDoctorForm();
             docLogin.Show();
-            DoctorRole_Button.Enabled = false;
         }
 
         private void AdministratorRole_Button_Click(object sender, EventArgs e)
         {
             LoginAdminForm logAdmin = new LoginAdminForm();
             logAdmin.Show();
-            AdministratorRole_Button.Enabled = false;
         }
     }
 }

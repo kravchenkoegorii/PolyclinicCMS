@@ -38,11 +38,13 @@
             this.Date_TextBox = new System.Windows.Forms.TextBox();
             this.Date_Label = new System.Windows.Forms.Label();
             this.Change_Button = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.NewDate_CheckBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // CheckPatient_Button
             // 
-            this.CheckPatient_Button.Location = new System.Drawing.Point(332, 55);
+            this.CheckPatient_Button.Location = new System.Drawing.Point(331, 81);
             this.CheckPatient_Button.Name = "CheckPatient_Button";
             this.CheckPatient_Button.Size = new System.Drawing.Size(99, 48);
             this.CheckPatient_Button.TabIndex = 21;
@@ -54,7 +56,7 @@
             // 
             this.CheckDate_Button.Location = new System.Drawing.Point(332, 26);
             this.CheckDate_Button.Name = "CheckDate_Button";
-            this.CheckDate_Button.Size = new System.Drawing.Size(99, 23);
+            this.CheckDate_Button.Size = new System.Drawing.Size(99, 49);
             this.CheckDate_Button.TabIndex = 19;
             this.CheckDate_Button.Text = "Перевірити час";
             this.CheckDate_Button.UseVisualStyleBackColor = true;
@@ -63,7 +65,7 @@
             // Error_Label
             // 
             this.Error_Label.AutoSize = true;
-            this.Error_Label.Location = new System.Drawing.Point(140, 127);
+            this.Error_Label.Location = new System.Drawing.Point(144, 146);
             this.Error_Label.Name = "Error_Label";
             this.Error_Label.Size = new System.Drawing.Size(0, 13);
             this.Error_Label.TabIndex = 18;
@@ -107,7 +109,7 @@
             // Date_TextBox
             // 
             this.Date_TextBox.Location = new System.Drawing.Point(143, 28);
-            this.Date_TextBox.MaxLength = 10;
+            this.Date_TextBox.MaxLength = 1000;
             this.Date_TextBox.Name = "Date_TextBox";
             this.Date_TextBox.Size = new System.Drawing.Size(183, 20);
             this.Date_TextBox.TabIndex = 17;
@@ -117,14 +119,14 @@
             this.Date_Label.AutoSize = true;
             this.Date_Label.Location = new System.Drawing.Point(12, 31);
             this.Date_Label.Name = "Date_Label";
-            this.Date_Label.Size = new System.Drawing.Size(67, 13);
+            this.Date_Label.Size = new System.Drawing.Size(93, 13);
             this.Date_Label.TabIndex = 12;
-            this.Date_Label.Text = "Дата та час";
+            this.Date_Label.Text = "Старі дата та час";
             this.Date_Label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Change_Button
             // 
-            this.Change_Button.Location = new System.Drawing.Point(166, 150);
+            this.Change_Button.Location = new System.Drawing.Point(170, 169);
             this.Change_Button.Name = "Change_Button";
             this.Change_Button.Size = new System.Drawing.Size(120, 46);
             this.Change_Button.TabIndex = 7;
@@ -132,11 +134,29 @@
             this.Change_Button.UseVisualStyleBackColor = true;
             this.Change_Button.Click += new System.EventHandler(this.Change_Button_Click_1);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 112);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Нові дата та час";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // NewDate_CheckBox
+            // 
+            this.NewDate_CheckBox.Location = new System.Drawing.Point(143, 109);
+            this.NewDate_CheckBox.MaxLength = 1000;
+            this.NewDate_CheckBox.Name = "NewDate_CheckBox";
+            this.NewDate_CheckBox.Size = new System.Drawing.Size(183, 20);
+            this.NewDate_CheckBox.TabIndex = 17;
+            // 
             // ChangeAppointmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(440, 208);
+            this.ClientSize = new System.Drawing.Size(442, 223);
             this.Controls.Add(this.CheckPatient_Button);
             this.Controls.Add(this.CheckDate_Button);
             this.Controls.Add(this.Error_Label);
@@ -144,6 +164,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.PatName_TextBox);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.NewDate_CheckBox);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Date_TextBox);
             this.Controls.Add(this.Date_Label);
             this.Controls.Add(this.Change_Button);
@@ -166,5 +188,7 @@
         private System.Windows.Forms.TextBox Date_TextBox;
         private System.Windows.Forms.Label Date_Label;
         private System.Windows.Forms.Button Change_Button;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox NewDate_CheckBox;
     }
 }

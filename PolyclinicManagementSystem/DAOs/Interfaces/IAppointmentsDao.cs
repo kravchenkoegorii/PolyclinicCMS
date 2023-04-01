@@ -1,4 +1,6 @@
-﻿using PolyclinicManagementSystem.Models;
+﻿using LiveCharts.Wpf;
+using PolyclinicManagementSystem.Models;
+using System;
 using System.Collections.Generic;
 
 namespace PolyclinicManagementSystem.DAOs.Interfaces
@@ -16,6 +18,8 @@ namespace PolyclinicManagementSystem.DAOs.Interfaces
         int GetAppointmentsCount();
 
         bool CheckAppointment(string docSurname, string patSurname);
+
+        bool CheckAppointment(string docName, string docSurname, string patName, string patSurname, DateTime date);
 
         AppointmentModel GetAppointment(string docSurname, string patSurname);
     }

@@ -10,7 +10,9 @@ namespace PolyclinicManagementSystem.Forms
 {
     public partial class ChangeAppointmentForm : Form
     {
-        private bool _checkDate;
+        private bool _checkOldDate;
+
+        private bool _checkNewDate;
 
         private bool _checkPat;
 
@@ -36,7 +38,7 @@ namespace PolyclinicManagementSystem.Forms
 
         private void Change_Button_Click_1(object sender, EventArgs e)
         {
-            if (_checkDate == false && _checkPat == false)
+            if (_checkOldDate == false || _checkNewDate == false || _checkPat == false)
             {
                 Error_Label.ForeColor = Color.Red;
                 Error_Label.Text = "Помилка: перевірте значення всіх полів!";
@@ -49,7 +51,7 @@ namespace PolyclinicManagementSystem.Forms
 
             AppointmentModel model = new AppointmentModel
             {
-                Date = DateTime.Parse(Date_TextBox.Text),
+                Date = DateTime.Parse(NewDate_CheckBox.Text),
                 DoctorName = _name,
                 DoctorSurname = _surname,
                 PatientName = PatName_TextBox.Text,
@@ -64,61 +66,74 @@ namespace PolyclinicManagementSystem.Forms
         private void CheckDate_Button_Click(object sender, EventArgs e)
         {
             var date = DateTime.Parse(Date_TextBox.Text);
+            if(!_appointmentsDao.CheckAppointment(_name, _surname, PatName_TextBox.Text, PatSurname_TextBox.Text, date))
+            {
+                Date_TextBox.ForeColor = Color.Red;
+                _checkOldDate = false;
+                return;
+            }
+            else
+            {
+                Date_TextBox.ForeColor = Color.Green;
+                _checkOldDate = true;
+            }
+
             var appointments = _appointmentsDao.GetDoctorAppointments(_name, _surname);
+            var date1 = DateTime.Parse(NewDate_CheckBox.Text);
 
             foreach (var item in appointments)
             {
-                if (item.Date.Day == date.Day && item.Date.Month == date.Month && date.Hour != item.Date.Hour)
+                if (item.Date.Day == date1.Day && item.Date.Month == date1.Month && date1.Hour != item.Date.Hour)
                 {
-                    if (date.Minute == 0 && date.Second == 0)
+                    if (date1.Minute == 0 && date1.Second == 0)
                     {
-                        if (date.Hour >= 7 && date.Hour <= 20)
+                        if (date1.Hour >= 7 && date1.Hour <= 20)
                         {
-                            Date_TextBox.ForeColor = Color.Green;
-                            _checkDate = true;
+                            NewDate_CheckBox.ForeColor = Color.Green;
+                            _checkNewDate = true;
                         }
                         else
                         {
-                            Date_TextBox.ForeColor = Color.Red;
-                            _checkDate = false;
+                            NewDate_CheckBox.ForeColor = Color.Red;
+                            _checkNewDate = false;
                             return;
                         }
                     }
                     else
                     {
-                        Date_TextBox.ForeColor = Color.Red;
-                        _checkDate = false;
+                        NewDate_CheckBox.ForeColor = Color.Red;
+                        _checkNewDate = false;
                         return;
                     }
                 }
                 else
                 {
-                    Date_TextBox.ForeColor = Color.Red;
-                    _checkDate = false;
+                    NewDate_CheckBox.ForeColor = Color.Red;
+                    _checkNewDate = false;
                     return;
                 }
             }
 
             if (appointments.Count == 0)
             {
-                if (date.Minute == 0 && date.Second == 0)
+                if (date1.Minute == 0 && date1.Second == 0)
                 {
-                    if (date.Hour >= 7 && date.Hour <= 20)
+                    if (date1.Hour >= 7 && date1.Hour <= 20)
                     {
-                        Date_TextBox.ForeColor = Color.Green;
-                        _checkDate = true;
+                        NewDate_CheckBox.ForeColor = Color.Green;
+                        _checkNewDate = true;
                     }
                     else
                     {
-                        Date_TextBox.ForeColor = Color.Red;
-                        _checkDate = false;
+                        NewDate_CheckBox.ForeColor = Color.Red;
+                        _checkNewDate = false;
                         return;
                     }
                 }
                 else
                 {
-                    Date_TextBox.ForeColor = Color.Red;
-                    _checkDate = false;
+                    NewDate_CheckBox.ForeColor = Color.Red;
+                    _checkNewDate = false;
                     return;
                 }
             }

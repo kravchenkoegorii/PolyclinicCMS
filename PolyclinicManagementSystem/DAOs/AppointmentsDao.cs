@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using PolyclinicManagementSystem.DAOs.Interfaces;
 using PolyclinicManagementSystem.Models;
+using System;
 using System.Collections.Generic;
 
 namespace PolyclinicManagementSystem.DAOs
@@ -136,8 +137,8 @@ namespace PolyclinicManagementSystem.DAOs
                 $"SET `date` = '{dateStr} '" +
                 $"WHERE `doctorname` = '{model.DoctorName}' " +
                 $"AND `doctorsurname` = '{model.DoctorSurname}' " +
-                $"AND `patientname` = '{model.PatientName}', " +
-                $"AND `patientsurname` = '{model.PatientSurname}');";
+                $"AND `patientname` = '{model.PatientName}' " +
+                $"AND `patientsurname` = '{model.PatientSurname}';";
             MySqlCommand command = new MySqlCommand(sql, connection);
 
             using (MySqlDataReader reader = command.ExecuteReader()) { }
@@ -156,6 +157,37 @@ namespace PolyclinicManagementSystem.DAOs
             command.Parameters.AddWithValue("@val1", docSurname);
             command.Parameters.AddWithValue("@val2", patSurname);
             command.Prepare();
+
+            using (MySqlDataReader reader = command.ExecuteReader())
+            {
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        int apId = reader.GetInt32(0);
+                        if (apId == 0)
+                        {
+                            return false;
+                        }
+                        return true;
+                    }
+                }
+                return false;
+            }
+        }
+
+        public bool CheckAppointment(string docName, string docSurname, string patName, string patSurname, DateTime date)
+        {
+            string d = date.ToString("yyyy-MM-dd HH:mm:ss");
+            MySqlConnection connection = new MySqlConnection(_connectionString);
+            connection.Open();
+            string sql = $"SELECT ap.id FROM Appointments ap " +
+                $"WHERE ap.doctorname = '{docName}' " +
+                $"AND ap.doctorsurname = '{docSurname}' " +
+                $"AND ap.patientname = '{patName}' " +
+                $"AND ap.patientsurname = '{patSurname}' " +
+                $"AND ap.date = '{d}';";
+            MySqlCommand command = new MySqlCommand(sql, connection);
 
             using (MySqlDataReader reader = command.ExecuteReader())
             {
