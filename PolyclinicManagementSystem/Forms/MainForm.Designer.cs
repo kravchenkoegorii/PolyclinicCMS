@@ -73,7 +73,7 @@
             this.Controls.Add(this.AdministratorRole_Button);
             this.Controls.Add(this.DoctorRole_Button);
             this.Name = "MainForm";
-            this.Text = "Система поліклініки";
+            this.Text = "Система “МояПоліклініка”";
             this.ResumeLayout(false);
             this.PerformLayout();
 
