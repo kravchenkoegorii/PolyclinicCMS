@@ -123,7 +123,7 @@ namespace PolyclinicManagementSystem
             this.Controls.Add(this.Login_Button);
             this.Controls.Add(this.label1);
             this.Name = "LoginDoctorForm";
-            this.Text = "Форма авторизації (Доктор)";
+            this.Text = "Форма авторизації (Лікар)";
             this.ResumeLayout(false);
             this.PerformLayout();
 

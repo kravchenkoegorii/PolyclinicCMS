@@ -78,9 +78,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 13);
+            this.label1.Size = new System.Drawing.Size(61, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Ім\'я доктора";
+            this.label1.Text = "Ім\'я лікаря";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // DocName_TextBox
@@ -96,9 +96,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 79);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 13);
+            this.label2.Size = new System.Drawing.Size(91, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Прізвище доктора";
+            this.label2.Text = "Прізвище лікаря";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // DocSurname_TextBox
@@ -169,7 +169,7 @@
             this.CheckDoctor_Button.Name = "CheckDoctor_Button";
             this.CheckDoctor_Button.Size = new System.Drawing.Size(99, 48);
             this.CheckDoctor_Button.TabIndex = 5;
-            this.CheckDoctor_Button.Text = "Перевірити доктора";
+            this.CheckDoctor_Button.Text = "Перевірити лікаря";
             this.CheckDoctor_Button.UseVisualStyleBackColor = true;
             this.CheckDoctor_Button.Click += new System.EventHandler(this.CheckDoctor_Button_Click);
             // 

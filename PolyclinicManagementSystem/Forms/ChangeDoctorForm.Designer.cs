@@ -185,7 +185,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Name = "ChangeDoctorForm";
-            this.Text = "Форма для зміни даних доктора";
+            this.Text = "Форма для зміни даних лікаря";
             this.ResumeLayout(false);
             this.PerformLayout();
 

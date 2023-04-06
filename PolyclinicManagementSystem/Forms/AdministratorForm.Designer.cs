@@ -73,7 +73,7 @@ namespace PolyclinicManagementSystem
             this.ShowDoctors_Button.Name = "ShowDoctors_Button";
             this.ShowDoctors_Button.Size = new System.Drawing.Size(139, 56);
             this.ShowDoctors_Button.TabIndex = 0;
-            this.ShowDoctors_Button.Text = "Переглянути всіх докторів";
+            this.ShowDoctors_Button.Text = "Переглянути всіх лікарів";
             this.ShowDoctors_Button.UseVisualStyleBackColor = true;
             this.ShowDoctors_Button.Click += new System.EventHandler(this.ShowDoctors_Button_Click);
             // 
@@ -161,7 +161,7 @@ namespace PolyclinicManagementSystem
             this.AddDoctor_Button.Name = "AddDoctor_Button";
             this.AddDoctor_Button.Size = new System.Drawing.Size(139, 56);
             this.AddDoctor_Button.TabIndex = 0;
-            this.AddDoctor_Button.Text = "Додати доктора";
+            this.AddDoctor_Button.Text = "Додати лікаря";
             this.AddDoctor_Button.UseVisualStyleBackColor = true;
             this.AddDoctor_Button.Click += new System.EventHandler(this.AddDoctor_Button_Click);
             // 
@@ -171,7 +171,7 @@ namespace PolyclinicManagementSystem
             this.ChangeDoctor_Button.Name = "ChangeDoctor_Button";
             this.ChangeDoctor_Button.Size = new System.Drawing.Size(139, 56);
             this.ChangeDoctor_Button.TabIndex = 0;
-            this.ChangeDoctor_Button.Text = "Змінити доктора";
+            this.ChangeDoctor_Button.Text = "Змінити лікаря";
             this.ChangeDoctor_Button.UseVisualStyleBackColor = true;
             this.ChangeDoctor_Button.Click += new System.EventHandler(this.ChangeDoctor_Button_Click);
             // 
@@ -284,13 +284,13 @@ namespace PolyclinicManagementSystem
             // doctorNameDataGridViewTextBoxColumn
             // 
             this.doctorNameDataGridViewTextBoxColumn.DataPropertyName = "DoctorName";
-            this.doctorNameDataGridViewTextBoxColumn.HeaderText = "Ім\'я доктора";
+            this.doctorNameDataGridViewTextBoxColumn.HeaderText = "Ім\'я лікаря";
             this.doctorNameDataGridViewTextBoxColumn.Name = "doctorNameDataGridViewTextBoxColumn";
             // 
             // doctorSurnameataGridViewTextBoxColumn
             // 
             this.doctorSurnameataGridViewTextBoxColumn.DataPropertyName = "DoctorSurname";
-            this.doctorSurnameataGridViewTextBoxColumn.HeaderText = "Прізвище доктора";
+            this.doctorSurnameataGridViewTextBoxColumn.HeaderText = "Прізвище лікаря";
             this.doctorSurnameataGridViewTextBoxColumn.Name = "doctorSurnameataGridViewTextBoxColumn";
             // 
             // AdministratorForm

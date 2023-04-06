@@ -42,8 +42,6 @@ C:\Users\mity-\Downloads\CMS\PolyclinicCMS\PolyclinicManagementSystem\bin\Debug\
 C:\Users\mity-\Downloads\CMS\PolyclinicCMS\PolyclinicManagementSystem\bin\Debug\K4os.Compression.LZ4.Streams.dll
 C:\Users\mity-\Downloads\CMS\PolyclinicCMS\PolyclinicManagementSystem\bin\Debug\K4os.Hash.xxHash.dll
 C:\Users\mity-\Downloads\CMS\PolyclinicCMS\PolyclinicManagementSystem\bin\Debug\MySql.Data.dll
-C:\Users\mity-\Downloads\CMS\PolyclinicCMS\PolyclinicManagementSystem\bin\Debug\ScottPlot.dll
-C:\Users\mity-\Downloads\CMS\PolyclinicCMS\PolyclinicManagementSystem\bin\Debug\ScottPlot.WinForms.dll
 C:\Users\mity-\Downloads\CMS\PolyclinicCMS\PolyclinicManagementSystem\bin\Debug\System.Buffers.dll
 C:\Users\mity-\Downloads\CMS\PolyclinicCMS\PolyclinicManagementSystem\bin\Debug\System.Drawing.Common.dll
 C:\Users\mity-\Downloads\CMS\PolyclinicCMS\PolyclinicManagementSystem\bin\Debug\System.IO.Pipelines.dll
@@ -60,7 +58,6 @@ C:\Users\mity-\Downloads\CMS\PolyclinicCMS\PolyclinicManagementSystem\bin\Debug\
 C:\Users\mity-\Downloads\CMS\PolyclinicCMS\PolyclinicManagementSystem\bin\Debug\K4os.Compression.LZ4.Streams.xml
 C:\Users\mity-\Downloads\CMS\PolyclinicCMS\PolyclinicManagementSystem\bin\Debug\K4os.Hash.xxHash.xml
 C:\Users\mity-\Downloads\CMS\PolyclinicCMS\PolyclinicManagementSystem\bin\Debug\MySql.Data.xml
-C:\Users\mity-\Downloads\CMS\PolyclinicCMS\PolyclinicManagementSystem\bin\Debug\ScottPlot.xml
 C:\Users\mity-\Downloads\CMS\PolyclinicCMS\PolyclinicManagementSystem\bin\Debug\System.Buffers.xml
 C:\Users\mity-\Downloads\CMS\PolyclinicCMS\PolyclinicManagementSystem\bin\Debug\System.IO.Pipelines.xml
 C:\Users\mity-\Downloads\CMS\PolyclinicCMS\PolyclinicManagementSystem\bin\Debug\System.Memory.xml
@@ -152,3 +149,13 @@ C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\Polyc
 C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.csproj.CopyComplete
 C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.exe
 C:\Users\kravc\OneDrive\Рабочий стол\PolyclinicManagementSystem\PolyclinicManagementSystem\obj\Debug\PolyclinicManagementSystem.pdb
+C:\Users\mity-\Downloads\CMS\PolyclinicCMS\PolyclinicManagementSystem\bin\Debug\LiveCharts.dll
+C:\Users\mity-\Downloads\CMS\PolyclinicCMS\PolyclinicManagementSystem\bin\Debug\LiveCharts.WinForms.dll
+C:\Users\mity-\Downloads\CMS\PolyclinicCMS\PolyclinicManagementSystem\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\mity-\Downloads\CMS\PolyclinicCMS\PolyclinicManagementSystem\bin\Debug\LiveCharts.pdb
+C:\Users\mity-\Downloads\CMS\PolyclinicCMS\PolyclinicManagementSystem\bin\Debug\LiveCharts.xml
+C:\Users\mity-\Downloads\CMS\PolyclinicCMS\PolyclinicManagementSystem\bin\Debug\LiveCharts.WinForms.pdb
+C:\Users\mity-\Downloads\CMS\PolyclinicCMS\PolyclinicManagementSystem\bin\Debug\LiveCharts.WinForms.xml
+C:\Users\mity-\Downloads\CMS\PolyclinicCMS\PolyclinicManagementSystem\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\mity-\Downloads\CMS\PolyclinicCMS\PolyclinicManagementSystem\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\mity-\Downloads\CMS\PolyclinicCMS\PolyclinicManagementSystem\bin\Debug\System.Drawing.Common.xml

@@ -181,7 +181,7 @@ namespace PolyclinicManagementSystem
             this.Add_Button.Name = "Add_Button";
             this.Add_Button.Size = new System.Drawing.Size(158, 45);
             this.Add_Button.TabIndex = 4;
-            this.Add_Button.Text = "Зареєструвати доктора";
+            this.Add_Button.Text = "Зареєструвати лікаря";
             this.Add_Button.UseVisualStyleBackColor = true;
             this.Add_Button.Click += new System.EventHandler(this.Add_Button_Click);
             // 
@@ -264,7 +264,7 @@ namespace PolyclinicManagementSystem
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Add_Button);
             this.Name = "RegisterDoctorForm";
-            this.Text = "Форма реєстрації доктора";
+            this.Text = "Форма реєстрації лікаря";
             this.ResumeLayout(false);
             this.PerformLayout();
 

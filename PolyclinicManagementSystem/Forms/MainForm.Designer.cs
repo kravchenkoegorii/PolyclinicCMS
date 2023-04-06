@@ -40,7 +40,7 @@
             this.DoctorRole_Button.Name = "DoctorRole_Button";
             this.DoctorRole_Button.Size = new System.Drawing.Size(177, 46);
             this.DoctorRole_Button.TabIndex = 0;
-            this.DoctorRole_Button.Text = "Доктор";
+            this.DoctorRole_Button.Text = "Лікар";
             this.DoctorRole_Button.UseVisualStyleBackColor = true;
             this.DoctorRole_Button.Click += new System.EventHandler(this.DoctorRole_Button_Click);
             // 
