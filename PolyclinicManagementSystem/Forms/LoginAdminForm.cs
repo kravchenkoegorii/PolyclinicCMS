@@ -55,5 +55,15 @@ namespace PolyclinicManagementSystem.Forms
                 Password_TextBox.ForeColor = Color.Black;
             }
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(label2, "ponyattya__dlya_administratora_.htm#1");
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(label3, "ponyattya__dlya_administratora_.htm#2");
+        }
     }
 }

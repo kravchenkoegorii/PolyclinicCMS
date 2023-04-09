@@ -32,12 +32,16 @@
             this.DoctorRole_Button = new System.Windows.Forms.Button();
             this.AdministratorRole_Button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
             // DoctorRole_Button
             // 
+            this.helpProvider1.SetHelpKeyword(this.DoctorRole_Button, "glosarij.htm#1");
+            this.helpProvider1.SetHelpNavigator(this.DoctorRole_Button, System.Windows.Forms.HelpNavigator.Topic);
             this.DoctorRole_Button.Location = new System.Drawing.Point(93, 42);
             this.DoctorRole_Button.Name = "DoctorRole_Button";
+            this.helpProvider1.SetShowHelp(this.DoctorRole_Button, true);
             this.DoctorRole_Button.Size = new System.Drawing.Size(177, 46);
             this.DoctorRole_Button.TabIndex = 0;
             this.DoctorRole_Button.Text = "Лікар";
@@ -46,8 +50,11 @@
             // 
             // AdministratorRole_Button
             // 
+            this.helpProvider1.SetHelpKeyword(this.AdministratorRole_Button, "glosarij.htm#2");
+            this.helpProvider1.SetHelpNavigator(this.AdministratorRole_Button, System.Windows.Forms.HelpNavigator.Topic);
             this.AdministratorRole_Button.Location = new System.Drawing.Point(93, 94);
             this.AdministratorRole_Button.Name = "AdministratorRole_Button";
+            this.helpProvider1.SetShowHelp(this.AdministratorRole_Button, true);
             this.AdministratorRole_Button.Size = new System.Drawing.Size(177, 46);
             this.AdministratorRole_Button.TabIndex = 2;
             this.AdministratorRole_Button.Text = "Адміністратор";
@@ -64,6 +71,11 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Авторизуватися як:";
             // 
+            // helpProvider1
+            // 
+            this.helpProvider1.HelpNamespace = "C:\\Users\\kravc\\OneDrive\\Рабочий стол\\PolyclinicManagementSystem\\МояПоліклініка.ch" +
+    "m";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -72,7 +84,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.AdministratorRole_Button);
             this.Controls.Add(this.DoctorRole_Button);
+            this.HelpButton = true;
+            this.helpProvider1.SetHelpKeyword(this, "osnovne.htm");
+            this.helpProvider1.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.Topic);
             this.Name = "MainForm";
+            this.helpProvider1.SetShowHelp(this, true);
             this.Text = "Система “МояПоліклініка”";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -86,5 +102,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }

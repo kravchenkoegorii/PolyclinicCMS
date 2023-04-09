@@ -47,11 +47,6 @@ namespace PolyclinicManagementSystem
             this.AddDoctor_Button = new System.Windows.Forms.Button();
             this.ChangeDoctor_Button = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.patientModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ChangePatient_Button = new System.Windows.Forms.Button();
-            this.ShowPatients_Button = new System.Windows.Forms.Button();
-            this.AddSpec_Button = new System.Windows.Forms.Button();
-            this.Graphic_Button = new System.Windows.Forms.Button();
             this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.surnameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.patronymicDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,6 +56,11 @@ namespace PolyclinicManagementSystem
             this.phoneNumberDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.doctorNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.doctorSurnameataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patientModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ChangePatient_Button = new System.Windows.Forms.Button();
+            this.ShowPatients_Button = new System.Windows.Forms.Button();
+            this.AddSpec_Button = new System.Windows.Forms.Button();
+            this.Graphic_Button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorModelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -195,50 +195,6 @@ namespace PolyclinicManagementSystem
             this.dataGridView2.Size = new System.Drawing.Size(701, 177);
             this.dataGridView2.TabIndex = 1;
             // 
-            // patientModelBindingSource
-            // 
-            this.patientModelBindingSource.DataSource = typeof(PolyclinicManagementSystem.Models.PatientModel);
-            // 
-            // ChangePatient_Button
-            // 
-            this.ChangePatient_Button.Location = new System.Drawing.Point(12, 309);
-            this.ChangePatient_Button.Name = "ChangePatient_Button";
-            this.ChangePatient_Button.Size = new System.Drawing.Size(139, 56);
-            this.ChangePatient_Button.TabIndex = 0;
-            this.ChangePatient_Button.Text = "Змінити пацієнта";
-            this.ChangePatient_Button.UseVisualStyleBackColor = true;
-            this.ChangePatient_Button.Click += new System.EventHandler(this.ChangePatient_Button_Click);
-            // 
-            // ShowPatients_Button
-            // 
-            this.ShowPatients_Button.Location = new System.Drawing.Point(13, 247);
-            this.ShowPatients_Button.Name = "ShowPatients_Button";
-            this.ShowPatients_Button.Size = new System.Drawing.Size(138, 56);
-            this.ShowPatients_Button.TabIndex = 2;
-            this.ShowPatients_Button.Text = "Переглянути всіх пацієнтів";
-            this.ShowPatients_Button.UseVisualStyleBackColor = true;
-            this.ShowPatients_Button.Click += new System.EventHandler(this.ShowPatients_Button_Click);
-            // 
-            // AddSpec_Button
-            // 
-            this.AddSpec_Button.Location = new System.Drawing.Point(13, 458);
-            this.AddSpec_Button.Name = "AddSpec_Button";
-            this.AddSpec_Button.Size = new System.Drawing.Size(138, 55);
-            this.AddSpec_Button.TabIndex = 3;
-            this.AddSpec_Button.Text = "Додати нову спеціалізацію";
-            this.AddSpec_Button.UseVisualStyleBackColor = true;
-            this.AddSpec_Button.Click += new System.EventHandler(this.AddSpec_Button_Click);
-            // 
-            // Graphic_Button
-            // 
-            this.Graphic_Button.Location = new System.Drawing.Point(236, 458);
-            this.Graphic_Button.Name = "Graphic_Button";
-            this.Graphic_Button.Size = new System.Drawing.Size(136, 55);
-            this.Graphic_Button.TabIndex = 4;
-            this.Graphic_Button.Text = "Статистика";
-            this.Graphic_Button.UseVisualStyleBackColor = true;
-            this.Graphic_Button.Click += new System.EventHandler(this.Graphic_Button_Click);
-            // 
             // nameDataGridViewTextBoxColumn1
             // 
             this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
@@ -293,6 +249,50 @@ namespace PolyclinicManagementSystem
             this.doctorSurnameataGridViewTextBoxColumn.HeaderText = "Прізвище лікаря";
             this.doctorSurnameataGridViewTextBoxColumn.Name = "doctorSurnameataGridViewTextBoxColumn";
             // 
+            // patientModelBindingSource
+            // 
+            this.patientModelBindingSource.DataSource = typeof(PolyclinicManagementSystem.Models.PatientModel);
+            // 
+            // ChangePatient_Button
+            // 
+            this.ChangePatient_Button.Location = new System.Drawing.Point(12, 309);
+            this.ChangePatient_Button.Name = "ChangePatient_Button";
+            this.ChangePatient_Button.Size = new System.Drawing.Size(139, 56);
+            this.ChangePatient_Button.TabIndex = 0;
+            this.ChangePatient_Button.Text = "Змінити пацієнта";
+            this.ChangePatient_Button.UseVisualStyleBackColor = true;
+            this.ChangePatient_Button.Click += new System.EventHandler(this.ChangePatient_Button_Click);
+            // 
+            // ShowPatients_Button
+            // 
+            this.ShowPatients_Button.Location = new System.Drawing.Point(13, 247);
+            this.ShowPatients_Button.Name = "ShowPatients_Button";
+            this.ShowPatients_Button.Size = new System.Drawing.Size(138, 56);
+            this.ShowPatients_Button.TabIndex = 2;
+            this.ShowPatients_Button.Text = "Переглянути всіх пацієнтів";
+            this.ShowPatients_Button.UseVisualStyleBackColor = true;
+            this.ShowPatients_Button.Click += new System.EventHandler(this.ShowPatients_Button_Click);
+            // 
+            // AddSpec_Button
+            // 
+            this.AddSpec_Button.Location = new System.Drawing.Point(13, 458);
+            this.AddSpec_Button.Name = "AddSpec_Button";
+            this.AddSpec_Button.Size = new System.Drawing.Size(138, 55);
+            this.AddSpec_Button.TabIndex = 3;
+            this.AddSpec_Button.Text = "Додати нову спеціалізацію";
+            this.AddSpec_Button.UseVisualStyleBackColor = true;
+            this.AddSpec_Button.Click += new System.EventHandler(this.AddSpec_Button_Click);
+            // 
+            // Graphic_Button
+            // 
+            this.Graphic_Button.Location = new System.Drawing.Point(236, 458);
+            this.Graphic_Button.Name = "Graphic_Button";
+            this.Graphic_Button.Size = new System.Drawing.Size(136, 55);
+            this.Graphic_Button.TabIndex = 4;
+            this.Graphic_Button.Text = "Статистика";
+            this.Graphic_Button.UseVisualStyleBackColor = true;
+            this.Graphic_Button.Click += new System.EventHandler(this.Graphic_Button_Click);
+            // 
             // AdministratorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -307,6 +307,7 @@ namespace PolyclinicManagementSystem
             this.Controls.Add(this.ChangeDoctor_Button);
             this.Controls.Add(this.AddDoctor_Button);
             this.Controls.Add(this.ShowDoctors_Button);
+            this.HelpButton = true;
             this.Name = "AdministratorForm";
             this.Text = "Головне вікно (Адміністратор)";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

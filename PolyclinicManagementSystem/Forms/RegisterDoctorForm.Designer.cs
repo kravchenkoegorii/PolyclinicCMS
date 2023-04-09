@@ -52,6 +52,7 @@ namespace PolyclinicManagementSystem
             this.label10 = new System.Windows.Forms.Label();
             this.Password_TextBox = new System.Windows.Forms.TextBox();
             this.Spec_ComboBox = new System.Windows.Forms.ComboBox();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
             // Phone_TextBox
@@ -177,8 +178,11 @@ namespace PolyclinicManagementSystem
             // 
             // Add_Button
             // 
+            this.helpProvider1.SetHelpKeyword(this.Add_Button, "funktsional__dlya_administratora_.htm#17");
+            this.helpProvider1.SetHelpNavigator(this.Add_Button, System.Windows.Forms.HelpNavigator.Topic);
             this.Add_Button.Location = new System.Drawing.Point(120, 278);
             this.Add_Button.Name = "Add_Button";
+            this.helpProvider1.SetShowHelp(this.Add_Button, true);
             this.Add_Button.Size = new System.Drawing.Size(158, 45);
             this.Add_Button.TabIndex = 4;
             this.Add_Button.Text = "Зареєструвати лікаря";
@@ -237,6 +241,11 @@ namespace PolyclinicManagementSystem
             this.Spec_ComboBox.Size = new System.Drawing.Size(238, 21);
             this.Spec_ComboBox.TabIndex = 20;
             // 
+            // helpProvider1
+            // 
+            this.helpProvider1.HelpNamespace = "C:\\Users\\kravc\\OneDrive\\Рабочий стол\\PolyclinicManagementSystem\\МояПоліклініка.ch" +
+    "m";
+            // 
             // RegisterDoctorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -263,7 +272,11 @@ namespace PolyclinicManagementSystem
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Add_Button);
+            this.HelpButton = true;
+            this.helpProvider1.SetHelpKeyword(this, "funktsional__dlya_administratora_.htm#16");
+            this.helpProvider1.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.Topic);
             this.Name = "RegisterDoctorForm";
+            this.helpProvider1.SetShowHelp(this, true);
             this.Text = "Форма реєстрації лікаря";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -292,5 +305,6 @@ namespace PolyclinicManagementSystem
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox Password_TextBox;
         private System.Windows.Forms.ComboBox Spec_ComboBox;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }

@@ -42,6 +42,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Name_TextBox = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
             // Email_TextBox
@@ -107,8 +108,11 @@
             // 
             // button1
             // 
+            this.helpProvider1.SetHelpKeyword(this.button1, "funktsional__dlya_administratora_.htm#12");
+            this.helpProvider1.SetHelpNavigator(this.button1, System.Windows.Forms.HelpNavigator.Topic);
             this.button1.Location = new System.Drawing.Point(141, 178);
             this.button1.Name = "button1";
+            this.helpProvider1.SetShowHelp(this.button1, true);
             this.button1.Size = new System.Drawing.Size(157, 56);
             this.button1.TabIndex = 29;
             this.button1.Text = "Змінити дані";
@@ -157,13 +161,21 @@
             // 
             // button2
             // 
+            this.helpProvider1.SetHelpKeyword(this.button2, "funktsional__dlya_administratora_.htm#11");
+            this.helpProvider1.SetHelpNavigator(this.button2, System.Windows.Forms.HelpNavigator.Topic);
             this.button2.Location = new System.Drawing.Point(355, 15);
             this.button2.Name = "button2";
+            this.helpProvider1.SetShowHelp(this.button2, true);
             this.button2.Size = new System.Drawing.Size(74, 46);
             this.button2.TabIndex = 31;
             this.button2.Text = "Загрузити дані";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // helpProvider1
+            // 
+            this.helpProvider1.HelpNamespace = "C:\\Users\\kravc\\OneDrive\\Рабочий стол\\PolyclinicManagementSystem\\МояПоліклініка.ch" +
+    "m";
             // 
             // ChangeDoctorForm
             // 
@@ -184,7 +196,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
+            this.HelpButton = true;
+            this.helpProvider1.SetHelpKeyword(this, "funktsional__dlya_administratora_.htm#10");
+            this.helpProvider1.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.Topic);
             this.Name = "ChangeDoctorForm";
+            this.helpProvider1.SetShowHelp(this, true);
             this.Text = "Форма для зміни даних лікаря";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -206,5 +222,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox Name_TextBox;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }

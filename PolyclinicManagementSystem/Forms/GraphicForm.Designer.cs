@@ -32,6 +32,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.doctorModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pieChart1 = new LiveCharts.WinForms.PieChart();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.doctorModelBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,6 +58,11 @@
             this.pieChart1.TabIndex = 2;
             this.pieChart1.Text = "pieChart1";
             // 
+            // helpProvider1
+            // 
+            this.helpProvider1.HelpNamespace = "C:\\Users\\kravc\\OneDrive\\Рабочий стол\\PolyclinicManagementSystem\\МояПоліклініка.ch" +
+    "m";
+            // 
             // GraphicForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -64,7 +70,11 @@
             this.ClientSize = new System.Drawing.Size(882, 465);
             this.Controls.Add(this.pieChart1);
             this.Controls.Add(this.button1);
+            this.HelpButton = true;
+            this.helpProvider1.SetHelpKeyword(this, "funktsional__dlya_administratora_.htm#14");
+            this.helpProvider1.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.Topic);
             this.Name = "GraphicForm";
+            this.helpProvider1.SetShowHelp(this, true);
             this.Text = "Форма статистики";
             ((System.ComponentModel.ISupportInitialize)(this.doctorModelBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -75,5 +85,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.BindingSource doctorModelBindingSource;
         private LiveCharts.WinForms.PieChart pieChart1;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }

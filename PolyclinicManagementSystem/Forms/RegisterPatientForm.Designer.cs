@@ -46,12 +46,16 @@ namespace PolyclinicManagementSystem
             this.PassportCode_TextBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.Phone_TextBox = new System.Windows.Forms.TextBox();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
             // Add_Button
             // 
+            this.helpProvider1.SetHelpKeyword(this.Add_Button, "funktsional__dlya_likarya_.htm#15");
+            this.helpProvider1.SetHelpNavigator(this.Add_Button, System.Windows.Forms.HelpNavigator.Topic);
             this.Add_Button.Location = new System.Drawing.Point(154, 228);
             this.Add_Button.Name = "Add_Button";
+            this.helpProvider1.SetShowHelp(this.Add_Button, true);
             this.Add_Button.Size = new System.Drawing.Size(158, 45);
             this.Add_Button.TabIndex = 0;
             this.Add_Button.Text = "Зареєструвати пацієнта";
@@ -180,6 +184,11 @@ namespace PolyclinicManagementSystem
             this.Phone_TextBox.TextChanged += new System.EventHandler(this.Phone_TextBox_TextChanged);
             this.Phone_TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Phone_TextBox_KeyPress);
             // 
+            // helpProvider1
+            // 
+            this.helpProvider1.HelpNamespace = "C:\\Users\\kravc\\OneDrive\\Рабочий стол\\PolyclinicManagementSystem\\МояПоліклініка.ch" +
+    "m";
+            // 
             // RegisterPatientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,7 +209,11 @@ namespace PolyclinicManagementSystem
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Add_Button);
+            this.HelpButton = true;
+            this.helpProvider1.SetHelpKeyword(this, "funktsional__dlya_likarya_.htm#14");
+            this.helpProvider1.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.Topic);
             this.Name = "RegisterPatientForm";
+            this.helpProvider1.SetShowHelp(this, true);
             this.Text = "Форма реєстрації пацієнта";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -224,5 +237,6 @@ namespace PolyclinicManagementSystem
         private System.Windows.Forms.TextBox PassportCode_TextBox;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox Phone_TextBox;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }

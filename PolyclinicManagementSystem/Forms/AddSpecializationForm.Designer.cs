@@ -31,12 +31,16 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
             // button1
             // 
+            this.helpProvider1.SetHelpKeyword(this.button1, "funktsional__dlya_administratora_.htm#2");
+            this.helpProvider1.SetHelpNavigator(this.button1, System.Windows.Forms.HelpNavigator.Topic);
             this.button1.Location = new System.Drawing.Point(96, 69);
             this.button1.Name = "button1";
+            this.helpProvider1.SetShowHelp(this.button1, true);
             this.button1.Size = new System.Drawing.Size(144, 51);
             this.button1.TabIndex = 0;
             this.button1.Text = "Додати спеціалізацію";
@@ -60,6 +64,11 @@
             this.textBox1.TabIndex = 2;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // helpProvider1
+            // 
+            this.helpProvider1.HelpNamespace = "C:\\Users\\kravc\\OneDrive\\Рабочий стол\\PolyclinicManagementSystem\\МояПоліклініка.ch" +
+    "m";
+            // 
             // AddSpecializationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -68,7 +77,11 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
+            this.HelpButton = true;
+            this.helpProvider1.SetHelpKeyword(this, "funktsional__dlya_administratora_.htm#1");
+            this.helpProvider1.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.Topic);
             this.Name = "AddSpecializationForm";
+            this.helpProvider1.SetShowHelp(this, true);
             this.Text = "Форма для додавання спеціалізації";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -80,5 +93,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }

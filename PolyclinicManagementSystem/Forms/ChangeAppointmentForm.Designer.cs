@@ -40,12 +40,16 @@
             this.Change_Button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.NewDate_CheckBox = new System.Windows.Forms.TextBox();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
             // CheckPatient_Button
             // 
+            this.helpProvider1.SetHelpKeyword(this.CheckPatient_Button, "funktsional__dlya_likarya_.htm#4");
+            this.helpProvider1.SetHelpNavigator(this.CheckPatient_Button, System.Windows.Forms.HelpNavigator.Topic);
             this.CheckPatient_Button.Location = new System.Drawing.Point(331, 81);
             this.CheckPatient_Button.Name = "CheckPatient_Button";
+            this.helpProvider1.SetShowHelp(this.CheckPatient_Button, true);
             this.CheckPatient_Button.Size = new System.Drawing.Size(99, 48);
             this.CheckPatient_Button.TabIndex = 21;
             this.CheckPatient_Button.Text = "Перевірити пацієнта";
@@ -54,8 +58,11 @@
             // 
             // CheckDate_Button
             // 
+            this.helpProvider1.SetHelpKeyword(this.CheckDate_Button, "funktsional__dlya_likarya_.htm#2");
+            this.helpProvider1.SetHelpNavigator(this.CheckDate_Button, System.Windows.Forms.HelpNavigator.Topic);
             this.CheckDate_Button.Location = new System.Drawing.Point(332, 26);
             this.CheckDate_Button.Name = "CheckDate_Button";
+            this.helpProvider1.SetShowHelp(this.CheckDate_Button, true);
             this.CheckDate_Button.Size = new System.Drawing.Size(99, 49);
             this.CheckDate_Button.TabIndex = 19;
             this.CheckDate_Button.Text = "Перевірити час";
@@ -126,8 +133,11 @@
             // 
             // Change_Button
             // 
+            this.helpProvider1.SetHelpKeyword(this.Change_Button, "funktsional__dlya_likarya_.htm#6");
+            this.helpProvider1.SetHelpNavigator(this.Change_Button, System.Windows.Forms.HelpNavigator.Topic);
             this.Change_Button.Location = new System.Drawing.Point(170, 169);
             this.Change_Button.Name = "Change_Button";
+            this.helpProvider1.SetShowHelp(this.Change_Button, true);
             this.Change_Button.Size = new System.Drawing.Size(120, 46);
             this.Change_Button.TabIndex = 7;
             this.Change_Button.Text = "Змінити запис";
@@ -152,6 +162,11 @@
             this.NewDate_CheckBox.Size = new System.Drawing.Size(183, 20);
             this.NewDate_CheckBox.TabIndex = 17;
             // 
+            // helpProvider1
+            // 
+            this.helpProvider1.HelpNamespace = "C:\\Users\\kravc\\OneDrive\\Рабочий стол\\PolyclinicManagementSystem\\МояПоліклініка.ch" +
+    "m";
+            // 
             // ChangeAppointmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -169,7 +184,11 @@
             this.Controls.Add(this.Date_TextBox);
             this.Controls.Add(this.Date_Label);
             this.Controls.Add(this.Change_Button);
+            this.HelpButton = true;
+            this.helpProvider1.SetHelpKeyword(this, "funktsional__dlya_likarya_.htm#5");
+            this.helpProvider1.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.Topic);
             this.Name = "ChangeAppointmentForm";
+            this.helpProvider1.SetShowHelp(this, true);
             this.Text = "Форма зміни запису";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -190,5 +209,6 @@
         private System.Windows.Forms.Button Change_Button;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox NewDate_CheckBox;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }

@@ -35,6 +35,7 @@
             this.Email_TextBox = new System.Windows.Forms.TextBox();
             this.Login_Button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
             // Error_Label
@@ -54,6 +55,7 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "Пароль";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // Password_TextBox
             // 
@@ -74,6 +76,7 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "Ел. адреса";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Email_TextBox
             // 
@@ -86,8 +89,11 @@
             // 
             // Login_Button
             // 
+            this.helpProvider1.SetHelpKeyword(this.Login_Button, "ponyattya__dlya_administratora_.htm#3");
+            this.helpProvider1.SetHelpNavigator(this.Login_Button, System.Windows.Forms.HelpNavigator.Topic);
             this.Login_Button.Location = new System.Drawing.Point(124, 185);
             this.Login_Button.Name = "Login_Button";
+            this.helpProvider1.SetShowHelp(this.Login_Button, true);
             this.Login_Button.Size = new System.Drawing.Size(130, 50);
             this.Login_Button.TabIndex = 6;
             this.Login_Button.Text = "Авторизуватись";
@@ -104,6 +110,11 @@
             this.label1.Text = "Введіть вашу ел. адресу та пароль";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // helpProvider1
+            // 
+            this.helpProvider1.HelpNamespace = "C:\\Users\\kravc\\OneDrive\\Рабочий стол\\PolyclinicManagementSystem\\МояПоліклініка.ch" +
+    "m";
+            // 
             // LoginAdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -116,7 +127,11 @@
             this.Controls.Add(this.Email_TextBox);
             this.Controls.Add(this.Login_Button);
             this.Controls.Add(this.label1);
+            this.HelpButton = true;
+            this.helpProvider1.SetHelpKeyword(this, "funktsional__dlya_administratora_.htm#15");
+            this.helpProvider1.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.Topic);
             this.Name = "LoginAdminForm";
+            this.helpProvider1.SetShowHelp(this, true);
             this.Text = "Форма авторизації (Адміністратор)";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -132,5 +147,6 @@
         private System.Windows.Forms.TextBox Email_TextBox;
         private System.Windows.Forms.Button Login_Button;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }

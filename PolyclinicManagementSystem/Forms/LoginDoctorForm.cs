@@ -54,5 +54,15 @@ namespace PolyclinicManagementSystem
                 Password_TextBox.ForeColor = Color.Black;
             }
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "МояПоліклініка.chm/glosarij.htm#2");
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "МояПоліклініка.chm::/glosarij.htm#3");
+        }
     }
 }
