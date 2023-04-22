@@ -275,9 +275,12 @@ namespace PolyclinicManagementSystem
             this.HelpButton = true;
             this.helpProvider1.SetHelpKeyword(this, "funktsional__dlya_administratora_.htm#16");
             this.helpProvider1.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.Topic);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "RegisterDoctorForm";
             this.helpProvider1.SetShowHelp(this, true);
             this.Text = "Форма реєстрації лікаря";
+            this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.RegisterDoctorForm_HelpButtonClicked);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -66,5 +66,11 @@ namespace PolyclinicManagementSystem
             _bindingSource2.DataSource = _appointmentsDao.GetDoctorAppointments(_name, _surname);
             dataGridView2.DataSource = _bindingSource2;
         }
+
+        private void DoctorForm_HelpButtonClicked(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            helpProvider1.HelpNamespace = "file://C:\\Users\\kravc\\OneDrive\\Рабочий стол\\PolyclinicManagementSystem\\МояПоліклініка.chm";
+            Help.ShowHelp(this, helpProvider1.HelpNamespace, HelpNavigator.Topic, "kontseptsiya__dlya_likarya_.htm");
+        }
     }
 }

@@ -225,9 +225,12 @@
             this.HelpButton = true;
             this.helpProvider1.SetHelpKeyword(this, "funktsional__dlya_likarya_.htm");
             this.helpProvider1.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.Topic);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AddAppointmentForm";
             this.helpProvider1.SetShowHelp(this, true);
             this.Text = "Форма запису пацієнта";
+            this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.AddAppointmentForm_HelpButtonClicked);
             this.ResumeLayout(false);
             this.PerformLayout();
 

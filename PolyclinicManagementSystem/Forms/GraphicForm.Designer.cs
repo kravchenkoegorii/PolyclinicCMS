@@ -73,9 +73,12 @@
             this.HelpButton = true;
             this.helpProvider1.SetHelpKeyword(this, "funktsional__dlya_administratora_.htm#14");
             this.helpProvider1.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.Topic);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "GraphicForm";
             this.helpProvider1.SetShowHelp(this, true);
             this.Text = "Форма статистики";
+            this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.GraphicForm_HelpButtonClicked);
             ((System.ComponentModel.ISupportInitialize)(this.doctorModelBindingSource)).EndInit();
             this.ResumeLayout(false);
 

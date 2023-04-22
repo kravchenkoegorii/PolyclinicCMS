@@ -61,6 +61,7 @@ namespace PolyclinicManagementSystem
             this.ShowPatients_Button = new System.Windows.Forms.Button();
             this.AddSpec_Button = new System.Windows.Forms.Button();
             this.Graphic_Button = new System.Windows.Forms.Button();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorModelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -69,8 +70,11 @@ namespace PolyclinicManagementSystem
             // 
             // ShowDoctors_Button
             // 
+            this.helpProvider1.SetHelpKeyword(this.ShowDoctors_Button, "funktsional__dlya_administratora_.htm#3");
+            this.helpProvider1.SetHelpNavigator(this.ShowDoctors_Button, System.Windows.Forms.HelpNavigator.Topic);
             this.ShowDoctors_Button.Location = new System.Drawing.Point(12, 12);
             this.ShowDoctors_Button.Name = "ShowDoctors_Button";
+            this.helpProvider1.SetShowHelp(this.ShowDoctors_Button, true);
             this.ShowDoctors_Button.Size = new System.Drawing.Size(139, 56);
             this.ShowDoctors_Button.TabIndex = 0;
             this.ShowDoctors_Button.Text = "Переглянути всіх лікарів";
@@ -157,8 +161,11 @@ namespace PolyclinicManagementSystem
             // 
             // AddDoctor_Button
             // 
+            this.helpProvider1.SetHelpKeyword(this.AddDoctor_Button, "funktsional__dlya_administratora_.htm#4");
+            this.helpProvider1.SetHelpNavigator(this.AddDoctor_Button, System.Windows.Forms.HelpNavigator.Topic);
             this.AddDoctor_Button.Location = new System.Drawing.Point(12, 71);
             this.AddDoctor_Button.Name = "AddDoctor_Button";
+            this.helpProvider1.SetShowHelp(this.AddDoctor_Button, true);
             this.AddDoctor_Button.Size = new System.Drawing.Size(139, 56);
             this.AddDoctor_Button.TabIndex = 0;
             this.AddDoctor_Button.Text = "Додати лікаря";
@@ -167,8 +174,11 @@ namespace PolyclinicManagementSystem
             // 
             // ChangeDoctor_Button
             // 
+            this.helpProvider1.SetHelpKeyword(this.ChangeDoctor_Button, "funktsional__dlya_administratora_.htm#5");
+            this.helpProvider1.SetHelpNavigator(this.ChangeDoctor_Button, System.Windows.Forms.HelpNavigator.Topic);
             this.ChangeDoctor_Button.Location = new System.Drawing.Point(12, 133);
             this.ChangeDoctor_Button.Name = "ChangeDoctor_Button";
+            this.helpProvider1.SetShowHelp(this.ChangeDoctor_Button, true);
             this.ChangeDoctor_Button.Size = new System.Drawing.Size(139, 56);
             this.ChangeDoctor_Button.TabIndex = 0;
             this.ChangeDoctor_Button.Text = "Змінити лікаря";
@@ -255,8 +265,11 @@ namespace PolyclinicManagementSystem
             // 
             // ChangePatient_Button
             // 
+            this.helpProvider1.SetHelpKeyword(this.ChangePatient_Button, "funktsional__dlya_administratora_.htm#7");
+            this.helpProvider1.SetHelpNavigator(this.ChangePatient_Button, System.Windows.Forms.HelpNavigator.Topic);
             this.ChangePatient_Button.Location = new System.Drawing.Point(12, 309);
             this.ChangePatient_Button.Name = "ChangePatient_Button";
+            this.helpProvider1.SetShowHelp(this.ChangePatient_Button, true);
             this.ChangePatient_Button.Size = new System.Drawing.Size(139, 56);
             this.ChangePatient_Button.TabIndex = 0;
             this.ChangePatient_Button.Text = "Змінити пацієнта";
@@ -265,8 +278,11 @@ namespace PolyclinicManagementSystem
             // 
             // ShowPatients_Button
             // 
+            this.helpProvider1.SetHelpKeyword(this.ShowPatients_Button, "funktsional__dlya_administratora_.htm#6");
+            this.helpProvider1.SetHelpNavigator(this.ShowPatients_Button, System.Windows.Forms.HelpNavigator.Topic);
             this.ShowPatients_Button.Location = new System.Drawing.Point(13, 247);
             this.ShowPatients_Button.Name = "ShowPatients_Button";
+            this.helpProvider1.SetShowHelp(this.ShowPatients_Button, true);
             this.ShowPatients_Button.Size = new System.Drawing.Size(138, 56);
             this.ShowPatients_Button.TabIndex = 2;
             this.ShowPatients_Button.Text = "Переглянути всіх пацієнтів";
@@ -275,8 +291,11 @@ namespace PolyclinicManagementSystem
             // 
             // AddSpec_Button
             // 
+            this.helpProvider1.SetHelpKeyword(this.AddSpec_Button, "funktsional__dlya_administratora_.htm#8");
+            this.helpProvider1.SetHelpNavigator(this.AddSpec_Button, System.Windows.Forms.HelpNavigator.Topic);
             this.AddSpec_Button.Location = new System.Drawing.Point(13, 458);
             this.AddSpec_Button.Name = "AddSpec_Button";
+            this.helpProvider1.SetShowHelp(this.AddSpec_Button, true);
             this.AddSpec_Button.Size = new System.Drawing.Size(138, 55);
             this.AddSpec_Button.TabIndex = 3;
             this.AddSpec_Button.Text = "Додати нову спеціалізацію";
@@ -285,13 +304,21 @@ namespace PolyclinicManagementSystem
             // 
             // Graphic_Button
             // 
+            this.helpProvider1.SetHelpKeyword(this.Graphic_Button, "funktsional__dlya_administratora_.htm#9");
+            this.helpProvider1.SetHelpNavigator(this.Graphic_Button, System.Windows.Forms.HelpNavigator.Topic);
             this.Graphic_Button.Location = new System.Drawing.Point(236, 458);
             this.Graphic_Button.Name = "Graphic_Button";
+            this.helpProvider1.SetShowHelp(this.Graphic_Button, true);
             this.Graphic_Button.Size = new System.Drawing.Size(136, 55);
             this.Graphic_Button.TabIndex = 4;
             this.Graphic_Button.Text = "Статистика";
             this.Graphic_Button.UseVisualStyleBackColor = true;
             this.Graphic_Button.Click += new System.EventHandler(this.Graphic_Button_Click);
+            // 
+            // helpProvider1
+            // 
+            this.helpProvider1.HelpNamespace = "C:\\Users\\kravc\\OneDrive\\Рабочий стол\\PolyclinicManagementSystem\\МояПоліклініка.ch" +
+    "m";
             // 
             // AdministratorForm
             // 
@@ -308,8 +335,11 @@ namespace PolyclinicManagementSystem
             this.Controls.Add(this.AddDoctor_Button);
             this.Controls.Add(this.ShowDoctors_Button);
             this.HelpButton = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AdministratorForm";
             this.Text = "Головне вікно (Адміністратор)";
+            this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.AdministratorForm_HelpButtonClicked);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorModelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -349,5 +379,6 @@ namespace PolyclinicManagementSystem
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn doctorNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn doctorSurnameataGridViewTextBoxColumn;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }

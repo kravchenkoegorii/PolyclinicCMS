@@ -1,6 +1,7 @@
 ﻿using PolyclinicManagementSystem.DAOs;
 using System;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace PolyclinicManagementSystem
@@ -55,14 +56,10 @@ namespace PolyclinicManagementSystem
             }
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void LoginDoctorForm_HelpButtonClicked(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            Help.ShowHelp(this, "МояПоліклініка.chm/glosarij.htm#2");
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-            Help.ShowHelp(this, "МояПоліклініка.chm::/glosarij.htm#3");
+            helpProvider1.HelpNamespace = "file://C:\\Users\\kravc\\OneDrive\\Рабочий стол\\PolyclinicManagementSystem\\МояПоліклініка.chm";
+            Help.ShowHelp(this, helpProvider1.HelpNamespace, HelpNavigator.Topic, "forma_avtorizatsii.htm");
         }
     }
 }

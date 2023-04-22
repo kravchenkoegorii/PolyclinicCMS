@@ -37,7 +37,7 @@
             // 
             // DoctorRole_Button
             // 
-            this.helpProvider1.SetHelpKeyword(this.DoctorRole_Button, "glosarij.htm#1");
+            this.helpProvider1.SetHelpKeyword(this.DoctorRole_Button, "pochatkova_forma.htm#2");
             this.helpProvider1.SetHelpNavigator(this.DoctorRole_Button, System.Windows.Forms.HelpNavigator.Topic);
             this.DoctorRole_Button.Location = new System.Drawing.Point(93, 42);
             this.DoctorRole_Button.Name = "DoctorRole_Button";
@@ -50,7 +50,7 @@
             // 
             // AdministratorRole_Button
             // 
-            this.helpProvider1.SetHelpKeyword(this.AdministratorRole_Button, "glosarij.htm#2");
+            this.helpProvider1.SetHelpKeyword(this.AdministratorRole_Button, "pochatkova_forma.htm#1");
             this.helpProvider1.SetHelpNavigator(this.AdministratorRole_Button, System.Windows.Forms.HelpNavigator.Topic);
             this.AdministratorRole_Button.Location = new System.Drawing.Point(93, 94);
             this.AdministratorRole_Button.Name = "AdministratorRole_Button";
@@ -87,9 +87,13 @@
             this.HelpButton = true;
             this.helpProvider1.SetHelpKeyword(this, "osnovne.htm");
             this.helpProvider1.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.Topic);
+            this.KeyPreview = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MainForm";
             this.helpProvider1.SetShowHelp(this, true);
             this.Text = "Система “МояПоліклініка”";
+            this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.MainForm_HelpButtonClicked);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -56,7 +56,7 @@ namespace PolyclinicManagementSystem
             // 
             // Login_Button
             // 
-            this.helpProvider1.SetHelpKeyword(this.Login_Button, "ponyattya__dlya_likarya_.htm#1");
+            this.helpProvider1.SetHelpKeyword(this.Login_Button, "forma_avtorizatsii.htm");
             this.helpProvider1.SetHelpNavigator(this.Login_Button, System.Windows.Forms.HelpNavigator.Topic);
             this.Login_Button.Location = new System.Drawing.Point(125, 209);
             this.Login_Button.Name = "Login_Button";
@@ -78,14 +78,16 @@ namespace PolyclinicManagementSystem
             // 
             // label2
             // 
+            this.helpProvider1.SetHelpKeyword(this.label2, "funktsional__dlya_likarya_,htm#16");
+            this.helpProvider1.SetHelpNavigator(this.label2, System.Windows.Forms.HelpNavigator.Topic);
             this.label2.Location = new System.Drawing.Point(34, 92);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.helpProvider1.SetShowHelp(this.label2, true);
             this.label2.Size = new System.Drawing.Size(62, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Ел. адреса";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Password_TextBox
             // 
@@ -99,13 +101,15 @@ namespace PolyclinicManagementSystem
             // 
             // label3
             // 
+            this.helpProvider1.SetHelpKeyword(this.label3, "funktsional__dlya_likarya_,htm#16");
+            this.helpProvider1.SetHelpNavigator(this.label3, System.Windows.Forms.HelpNavigator.Topic);
             this.label3.Location = new System.Drawing.Point(12, 130);
             this.label3.Name = "label3";
+            this.helpProvider1.SetShowHelp(this.label3, true);
             this.label3.Size = new System.Drawing.Size(67, 20);
             this.label3.TabIndex = 3;
             this.label3.Text = "Пароль";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // Error_Label
             // 
@@ -134,11 +138,14 @@ namespace PolyclinicManagementSystem
             this.Controls.Add(this.Login_Button);
             this.Controls.Add(this.label1);
             this.HelpButton = true;
-            this.helpProvider1.SetHelpKeyword(this, "funktsional__dlya_likarya_.htm#13");
+            this.helpProvider1.SetHelpKeyword(this, "forma_avtorizatsii.htm");
             this.helpProvider1.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.Topic);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "LoginDoctorForm";
             this.helpProvider1.SetShowHelp(this, true);
             this.Text = "Форма авторизації (Лікар)";
+            this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.LoginDoctorForm_HelpButtonClicked);
             this.ResumeLayout(false);
             this.PerformLayout();
 

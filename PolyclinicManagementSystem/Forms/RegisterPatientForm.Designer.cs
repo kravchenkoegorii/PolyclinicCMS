@@ -212,9 +212,12 @@ namespace PolyclinicManagementSystem
             this.HelpButton = true;
             this.helpProvider1.SetHelpKeyword(this, "funktsional__dlya_likarya_.htm#14");
             this.helpProvider1.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.Topic);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "RegisterPatientForm";
             this.helpProvider1.SetShowHelp(this, true);
             this.Text = "Форма реєстрації пацієнта";
+            this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.RegisterPatientForm_HelpButtonClicked);
             this.ResumeLayout(false);
             this.PerformLayout();
 

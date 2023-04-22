@@ -199,9 +199,12 @@
             this.HelpButton = true;
             this.helpProvider1.SetHelpKeyword(this, "funktsional__dlya_administratora_.htm#10");
             this.helpProvider1.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.Topic);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ChangeDoctorForm";
             this.helpProvider1.SetShowHelp(this, true);
             this.Text = "Форма для зміни даних лікаря";
+            this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.ChangeDoctorForm_HelpButtonClicked);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -49,5 +49,11 @@ namespace PolyclinicManagementSystem.Forms
 
             pieChart1.Refresh();
         }
+
+        private void GraphicForm_HelpButtonClicked(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            helpProvider1.HelpNamespace = "file://C:\\Users\\kravc\\OneDrive\\Рабочий стол\\PolyclinicManagementSystem\\МояПоліклініка.chm";
+            Help.ShowHelp(this, helpProvider1.HelpNamespace, HelpNavigator.Topic, "funktsional__dlya_administratora_.htm#9");
+        }
     }
 }

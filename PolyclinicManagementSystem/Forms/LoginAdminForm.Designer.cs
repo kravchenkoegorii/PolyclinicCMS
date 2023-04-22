@@ -89,7 +89,7 @@
             // 
             // Login_Button
             // 
-            this.helpProvider1.SetHelpKeyword(this.Login_Button, "ponyattya__dlya_administratora_.htm#3");
+            this.helpProvider1.SetHelpKeyword(this.Login_Button, "forma_avtorizatsii.htm");
             this.helpProvider1.SetHelpNavigator(this.Login_Button, System.Windows.Forms.HelpNavigator.Topic);
             this.Login_Button.Location = new System.Drawing.Point(124, 185);
             this.Login_Button.Name = "Login_Button";
@@ -130,9 +130,12 @@
             this.HelpButton = true;
             this.helpProvider1.SetHelpKeyword(this, "funktsional__dlya_administratora_.htm#15");
             this.helpProvider1.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.Topic);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "LoginAdminForm";
             this.helpProvider1.SetShowHelp(this, true);
             this.Text = "Форма авторизації (Адміністратор)";
+            this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.LoginAdminForm_HelpButtonClicked);
             this.ResumeLayout(false);
             this.PerformLayout();
 

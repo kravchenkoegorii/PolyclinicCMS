@@ -22,5 +22,11 @@ namespace PolyclinicManagementSystem
             LoginAdminForm logAdmin = new LoginAdminForm();
             logAdmin.Show();
         }
+
+        private void MainForm_HelpButtonClicked(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            helpProvider1.HelpNamespace = "file://C:\\Users\\kravc\\OneDrive\\Рабочий стол\\PolyclinicManagementSystem\\МояПоліклініка.chm";
+            Help.ShowHelp(this, helpProvider1.HelpNamespace, HelpNavigator.Topic, "pochatkova_forma.htm");
+        }
     }
 }

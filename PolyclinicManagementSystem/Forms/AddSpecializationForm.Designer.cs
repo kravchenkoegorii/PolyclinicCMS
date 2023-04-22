@@ -80,9 +80,12 @@
             this.HelpButton = true;
             this.helpProvider1.SetHelpKeyword(this, "funktsional__dlya_administratora_.htm#1");
             this.helpProvider1.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.Topic);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AddSpecializationForm";
             this.helpProvider1.SetShowHelp(this, true);
             this.Text = "Форма для додавання спеціалізації";
+            this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.AddSpecializationForm_HelpButtonClicked);
             this.ResumeLayout(false);
             this.PerformLayout();
 

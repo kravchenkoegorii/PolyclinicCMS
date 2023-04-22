@@ -58,12 +58,18 @@ namespace PolyclinicManagementSystem.Forms
 
         private void label2_Click(object sender, EventArgs e)
         {
-            Help.ShowHelp(label2, "ponyattya__dlya_administratora_.htm#1");
+            Help.ShowHelp(label2, "funktsional__dlya_administratora_.htm#16");
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
-            Help.ShowHelp(label3, "ponyattya__dlya_administratora_.htm#2");
+            Help.ShowHelp(label3, "funktsional__dlya_administratora_.htm#16");
+        }
+
+        private void LoginAdminForm_HelpButtonClicked(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            helpProvider1.HelpNamespace = "file://C:\\Users\\kravc\\OneDrive\\Рабочий стол\\PolyclinicManagementSystem\\МояПоліклініка.chm";
+            Help.ShowHelp(this, helpProvider1.HelpNamespace, HelpNavigator.Topic, "forma_avtorizatsii.htm");
         }
     }
 }
