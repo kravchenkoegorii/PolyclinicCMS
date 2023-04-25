@@ -1,5 +1,4 @@
-﻿using LiveCharts.Wpf;
-using PolyclinicManagementSystem.Models;
+﻿using PolyclinicManagementSystem.Models;
 using System;
 using System.Collections.Generic;
 

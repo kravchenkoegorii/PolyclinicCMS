@@ -69,7 +69,7 @@ namespace PolyclinicManagementSystem
 
         private void DoctorForm_HelpButtonClicked(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            helpProvider1.HelpNamespace = "file://C:\\Users\\kravc\\OneDrive\\Рабочий стол\\PolyclinicManagementSystem\\МояПоліклініка.chm";
+            helpProvider1.HelpNamespace = Consts.ChmFilePath;
             Help.ShowHelp(this, helpProvider1.HelpNamespace, HelpNavigator.Topic, "kontseptsiya__dlya_likarya_.htm");
         }
     }

@@ -66,7 +66,7 @@ namespace PolyclinicManagementSystem.Forms
         private void CheckDate_Button_Click(object sender, EventArgs e)
         {
             var date = DateTime.Parse(Date_TextBox.Text);
-            if(!_appointmentsDao.CheckAppointment(_name, _surname, PatName_TextBox.Text, PatSurname_TextBox.Text, date))
+            if (!_appointmentsDao.CheckAppointment(_name, _surname, PatName_TextBox.Text, PatSurname_TextBox.Text, date))
             {
                 Date_TextBox.ForeColor = Color.Red;
                 _checkOldDate = false;
@@ -181,7 +181,7 @@ namespace PolyclinicManagementSystem.Forms
 
         private void ChangeAppointmentForm_HelpButtonClicked(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            helpProvider1.HelpNamespace = "file://C:\\Users\\kravc\\OneDrive\\Рабочий стол\\PolyclinicManagementSystem\\МояПоліклініка.chm";
+            helpProvider1.HelpNamespace = Consts.ChmFilePath;
             Help.ShowHelp(this, helpProvider1.HelpNamespace, HelpNavigator.Topic, "funktsional__dlya_likarya_.htm#12");
         }
     }

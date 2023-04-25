@@ -1,7 +1,6 @@
 ﻿using PolyclinicManagementSystem.DAOs;
 using System;
 using System.Drawing;
-using System.IO;
 using System.Windows.Forms;
 
 namespace PolyclinicManagementSystem
@@ -58,7 +57,7 @@ namespace PolyclinicManagementSystem
 
         private void LoginDoctorForm_HelpButtonClicked(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            helpProvider1.HelpNamespace = "file://C:\\Users\\kravc\\OneDrive\\Рабочий стол\\PolyclinicManagementSystem\\МояПоліклініка.chm";
+            helpProvider1.HelpNamespace = Consts.ChmFilePath;
             Help.ShowHelp(this, helpProvider1.HelpNamespace, HelpNavigator.Topic, "forma_avtorizatsii.htm");
         }
     }
